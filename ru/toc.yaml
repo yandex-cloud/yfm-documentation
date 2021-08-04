@@ -1,0 +1,59 @@
+title: Yandex Flavored Markdown
+items:
+  - name: YFM
+    # общее описание что такое YFM, типа лендос
+    href: index.md
+  - name: Quickstart
+    # как поставить, как запустить, просто команды
+    # и ссылка на пошаговое руководство по созданию проекта
+    href: quickstart.md
+  - name: Синтаксис
+    # весь синтаксис сначала MD, потом YFM.
+    # Как в asciidoc: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+    # В конце привести диаграммы и формулы, но со ссылками как их подключить
+    # И припиской что еще много всего чудного с помощью плагинов
+    href: syntax.md
+  - name: Инструменты
+    # про инструменты
+    items:
+      - name: Transformer
+        # yfm-transform
+        href: tools/transform.md
+      - name: Builder
+        # yfm-docs
+        href: tools/docs.md
+  - name: Plugins
+    items:
+      - name: Обзор
+        href: plugins/overview.md
+      - name: Доступные из коробки
+        href: plugins/default.md
+      - name: Как подключить
+        href: plugins/import.md
+      - name: Диаграммы
+        href: plugins/charts.md
+      - name: Формулы
+        href: plugins/latex.md
+  - name: Структура YFM проекта
+    items:
+      - name: Обзор
+        # здесь +пример
+        href: project/overview.md
+      - name: Пошаговое руководство
+        # пошаговое добавление частей со ссылками на подробное описание в других разделах
+        href: project/introduction.md
+      - name: Оглавление
+        href: project/toc.md
+      - name: Разводящая страница
+        href: project/leading-page.md
+      - name: Пресеты переменных
+        href: project/presets.md
+      - name: Includes
+        # еще раз рассказываем про инклюды и бестпрактисы с ними
+        href: project/includes.md
+      - name: Файл конфигурации
+        href: project/config.md
+  - name: Contribution
+    href: contribution.md
+  - name: Chagelog
+    href: changelog.md
