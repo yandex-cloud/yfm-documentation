@@ -13,8 +13,6 @@ items:
     # В конце привести диаграммы и формулы, но со ссылками как их подключить
     # И припиской что еще много всего чудного с помощью плагинов
     href: syntax.md
-  - name: Настройки
-    href: settings.md
   - name: Инструменты
     # про инструменты
     items:
@@ -24,18 +22,14 @@ items:
       - name: Builder
         # yfm-docs
         href: tools/docs.md
-  - name: Plugins
+  - name: Плагины
     items:
       - name: Обзор
         href: plugins/overview.md
       - name: Доступные из коробки
         href: plugins/default.md
-      - name: Как подключить
+      - name: Как подключить дополнительные
         href: plugins/import.md
-      - name: Диаграммы
-        href: plugins/charts.md
-      - name: Формулы
-        href: plugins/latex.md
   - name: Структура YFM проекта
     items:
       - name: Обзор
@@ -50,8 +44,7 @@ items:
         href: project/leading-page.md
       - name: Пресеты переменных
         href: project/presets.md
-      - name: Includes
-        # еще раз рассказываем про инклюды и бестпрактисы с ними
+      - name: Переиспользование контента
         href: project/includes.md
       - name: Файл конфигурации
         href: project/config.md
