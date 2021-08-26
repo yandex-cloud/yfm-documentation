@@ -76,6 +76,6 @@ items:
 
 {% note tip %}
 
-Скрытые страницы можно полностью исключить из сборки с помощью [ключа сборки](../tools/docs.md#settings) `--remove-hidden-toc-items=true`.
+Скрытые страницы можно полностью исключить из сборки с помощью [ключа сборки](../tools/docs/settings.md) `--remove-hidden-toc-items=true`.
 
 {% endnote %}

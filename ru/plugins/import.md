@@ -2,7 +2,7 @@
 
 ## Подключение {#require}
 
-### Если вы используете [Transformer](../tools/transform.md) {#transformer}
+### Если вы используете [Transformer](../tools/transform/index.md) {#transformer}
 
 1. Установите npm пакет с нужным вам плагином, например, [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji).
 
@@ -29,7 +29,7 @@ const {result: {html, meta}, logs} = transform(content, {plugins: [cut, sup, emo
 
 {% endnote %}
 
-### Если вы используете [Builder](../tools/docs.md) {#builder}
+### Если вы используете [Builder](../tools/docs/index.md) {#builder}
 
 1. Установите npm пакет с нужным вам плагином, например, [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji).
 2. Переложите его в папку `./plugins` в пакете `@doc-tools/docs`.

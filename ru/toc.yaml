@@ -8,20 +8,29 @@ items:
     # и ссылка на пошаговое руководство по созданию проекта
     href: quickstart.md
   - name: Синтаксис
-    # весь синтаксис сначала MD, потом YFM.
-    # Как в asciidoc: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
-    # В конце привести диаграммы и формулы, но со ссылками как их подключить
-    # И припиской что еще много всего чудного с помощью плагинов
     href: syntax.md
+  - name: Настройки
+    href: settings.md
   - name: Инструменты
-    # про инструменты
     items:
       - name: Transformer
-        # yfm-transform
-        href: tools/transform.md
+        items:
+          - name: Обзор
+            href: tools/transform/index.md
+          - name: Настройки
+            href: tools/transform/settings.md
       - name: Builder
-        # yfm-docs
-        href: tools/docs.md
+        items:
+          - name: Обзор
+            href: tools/docs/index.md
+          - name: Настройки
+            href: tools/docs/settings.md
+          - name: Выкладка на S3
+            href: tools/docs/S3.md
+          - name: Одностраничная сборка
+            href: tools/docs/singlePage.md
+          - name: Сборка из YFM в YFM
+            href: tools/docs/md2md.md
   - name: Плагины
     items:
       - name: Обзор
