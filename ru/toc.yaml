@@ -3,10 +3,6 @@ items:
   - name: YFM
     # общее описание что такое YFM, типа лендос
     href: index.md
-  - name: Quickstart
-    # как поставить, как запустить, просто команды
-    # и ссылка на пошаговое руководство по созданию проекта
-    href: quickstart.md
   - name: Синтаксис
     href: syntax.md
   - name: Настройки
@@ -45,8 +41,6 @@ items:
         # здесь +пример
         href: project/overview.md
       - name: Пошаговое руководство
-        # пошаговое добавление частей со ссылками на подробное описание в других разделах
-        href: project/introduction.md
       - name: Оглавление
         href: project/toc.md
       - name: Разводящая страница
