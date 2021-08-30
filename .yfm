@@ -1,1 +1,6 @@
 disableLiquid: true
+
+docs-viewer:
+  project-name: yfm
+  github-url-prefix: https://github.com/yandex-cloud/yfm-documentation/blob/master
+  logo-title: YFM
