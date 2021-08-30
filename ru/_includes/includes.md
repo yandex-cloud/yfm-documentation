@@ -11,7 +11,7 @@
 1. Вставьте в документ ссылку на файл:
 
    ```markdown
-   {% include [Описание](_includes/file.md) %}
+   {% include [Описание](../_includes/file.md) %}
    ```
 
    Здесь:
@@ -25,7 +25,7 @@
 По-умолчанию, контент подключаемого файла вставляется целиком. Но бывает, что его заголовок не нужен. Тогда можно добавить ключевое слово `notitle`.
 
 ```markdown
-{% include notitle [Описание](_includes/file.md) %}
+{% include notitle [Описание](../_includes/file.md) %}
 ```
 
 {% endnote %}
