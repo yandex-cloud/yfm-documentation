@@ -1,4 +1,4 @@
-# Плагины {#plugins}
+# Плагины
 
 YFM в качестве парсера Markdown использует [markdown-it](https://www.npmjs.com/package/markdown-it), поэтому с ним можно использовать любые плагины из [огромного множества плагинов для markdown-it](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
 
