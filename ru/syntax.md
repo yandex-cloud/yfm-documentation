@@ -1192,6 +1192,18 @@ $$\begin{array}{c}
 
 {% endnote %}
 
+## Комментарии {#comments}
+
+Если вам нужно оставить комментарий, который не должен отображаться в итоговой разметке, то вы можете [использовать для этого пустую ссылку с примечанием](https://stackoverflow.com/questions/4823468/comments-in-markdown).
+
+```markdown
+[comment]: <> (This is a comment, it will not be included)
+[comment]: <> (in  the output file unless you use it in)
+[comment]: <> (a reference style link.)
+[//]: <> (This is also a comment.)
+[//]: # (This may be the most platform independent comment)
+```
+
 ## Экранирование служебных символов {#escaping}
 
 Если необходимо, чтобы служебный символ разметки не был интерпретирован, то его можно экранировать обратным слешом `\`.
