@@ -1,0 +1,33 @@
+title: Yandex Flavored Markdown
+description:
+  - >-
+    Yandex Flavored Markdown (YFM) — это диалект Markdown, а также набор инструментов для непрерывной <a href="https://yfm-documentation.docs-ext.yandex-team.ru/ru/tools/transform/">трансформации</a> Markdown в HTML и <a href="https://yfm-documentation.docs-ext.yandex-team.ru/ru/tools/docs/">сборки</a> полноценных документационных проектов. 
+  - >-
+    В качестве парсера используется <a href="https://www.npmjs.com/package/markdown-it">markdown-it</a>, что делает язык быстрым и расширяемым. Вы можете использовать плагины, включенные в пакет, подключить дополнительные от markdown-it или написать свои.
+meta:
+  title: Yandex Flavored Markdown
+links:
+  - title: Синтаксис
+    description: Описание элементов разметки
+    href: syntax/
+  - title: Настройки
+    description: Параметры для работы с YFM текстом
+    href: settings
+  - title: Transformer
+    description: Установите пакет для трансформации YFM в HTML
+    href: tools/transform/
+  - title: Builder
+    description: Установите пакет для сборки документационного проекта
+    href: tools/docs/
+  - title: Плагины
+    description: Описание расширений
+    href: plugins/
+  - title: Организация YFM проекта
+    description: Структура документа и страниц
+    href: project/
+  - title: Улучшение продукта
+    description: Планируемые релизы и инструкция по внесению изменений пользователями
+    href: contribution
+  - title: Релизы YFM
+    description: Описание релизов
+    href: changelog

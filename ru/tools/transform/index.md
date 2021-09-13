@@ -1,63 +1,64 @@
 # Transformer
 
-[@doc-tools/transform](https://www.npmjs.com/package/@doc-tools/transform) основной пакет занимающийся трансформацией Yandex Flavored Markdown в HTML.
+[@doc-tools/transform](https://www.npmjs.com/package/@doc-tools/transform) — пакет для трансформации Yandex Flavored Markdown в HTML.
 
-Вы можете использовать его в своем коде, если вам нужно работать с YFM текстами во время работы программы. Например, отображать пользовательские сообщения или другой контент содержащий YFM.
+Используйте его в своем коде для работы с текстом во время выполнения программы. Например, чтобы отображать пользовательские сообщения.
 
-## Установка и использование {#install}
+## Установка {#install}
 
-1. Установите пакет
+1. Установите пакет:
 
     ```shell
     npm i @doc-tools/transform
     ```
 
-3. Подключите его в своем коде
+1. Подключите пакет в своем коде, используя функцию `require()`:
 
     ```javascript
     const transform = require('@doc-tools/transform');
-   ```
-
-
-4. И используйте как функцию, которая принимает на вход строку с YFM и [настройки](./settings.md), а возвращает объект с результатом трансформации и логами.
-
-    ```javascript
-    const fs = require('fs');
-    const transform = require('@doc-tools/transform');
-
-    const content = fs.readFileSync(filePath, 'utf');
-    const vars = { user: { name: 'Alice' } };
-
-    const {
-        result: {html, meta, title, headings},
-        logs,
-   } = transform(content, {vars});
     ```
 
-5. Для корректного отображения подключите в проект
+1. Для корректного отображения подключите в проект CSS-стили и клиентские скрипты:
 
-   стили
-   ```css
-   @import '~@doc-tools/transform/dist/css/yfm.css';
-   ```
+     ```css
+     @import '~@doc-tools/transform/dist/css/yfm.css';
+     ```
 
-   и клиентские скрипты
-   ```javascript
-   import '@doc-tools/transform/dist/js/yfm';
-   ```
+     ```javascript
+     import '@doc-tools/transform/dist/js/yfm';
+     ```
 
-## Возвращаемый объект {#returnObject}
+## Использование {#use}
 
-`Transform` возвращает объект содержащий результат трансформации (поле `result`) и логи (поле `logs`).
+Пакет предоставляет функцию `transform()`:
+* входные данные — строка с YFM и [настройки](settings.md);
+* возвращаемое значение — объект с полями `result` и `logs`.
 
-### Результат {#result}
+### Поле result
+`result` — объект результата, содержит поля:
+* `html` — строка с HTML.
+* `meta` — [метаданные](../../syntax/block.md#meta) из переданного контента.
+* `title` — заголовок документа. Возвращается, если заданы настройки `extractTitle = true` или `needTitle = true`.
+* `headings` — список заголовков документа.
 
-Объект результата содержит следующие поля:
-1. `html` - строка с HTML.
-2. `meta` - [мета-информации](../../syntax.md#meta) из переданного контента.
-3. `title` - заголовок документа, если указан параметр `extractTitle` или `needTitle`.
-4. `headings` - список заголовков документа.
+### Поле logs
+`logs` — информация о процессе трансформации, включает массивы:
+* `error` — ошибки.
+* `warn` — предупреждения.
+* `info` — дополнительная информация.
 
-### Logs {#logs}
+### Пример вызова функции
 
-В логи записываются ошибки и предупреждения произошедшие при трансформации, а так же дополнительная информация о процессе трансформации. Логи разложены на три массива в зависимости от типа сообщения: `info`, `warn`, `error`.
+```javascript
+const fs = require('fs');
+const transform = require('@doc-tools/transform');
+
+const content = fs.readFileSync(filePath, 'utf');
+const vars = { user: { name: 'Alice' } };
+
+const {
+    result: {html, meta, title, headings},
+    logs,
+    } = transform(content, {vars});
+    
+```
