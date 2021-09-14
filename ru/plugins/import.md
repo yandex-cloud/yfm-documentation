@@ -3,6 +3,7 @@
 YFM использует [markdown-it](https://www.npmjs.com/package/markdown-it) в качестве парсера, поэтому вы можете подключить любой плагин из [списка плагинов для markdown-it](https://www.npmjs.com/search?q=keywords:markdown-it-plugin).
 
 ## Подключение {#require}
+
 {% list tabs %}
 
 - Transformer

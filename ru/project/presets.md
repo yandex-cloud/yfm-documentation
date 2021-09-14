@@ -31,7 +31,6 @@ external:
 
 {% endnote %}
 
-
 #### Пример
 
 ```

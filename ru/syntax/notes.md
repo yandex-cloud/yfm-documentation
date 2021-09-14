@@ -8,82 +8,76 @@
 * «Важно» — предостережение.
 * «Внимание» — ограничение.
 
-
 ## Примечание
-  ```markdown
-  {% note info %}
 
-  Это примечание.
+```markdown
+{% note info %}
 
-  {% endnote %}
-  ```
+Это примечание.
 
-  {% cut "Результат" %}
+{% endnote %}
+```
 
-  {% note info %}
+**Результат**
 
-  Это примечание.
+{% note info %}
 
-  {% endnote %}
+Это примечание.
 
-  {% endcut %}
+{% endnote %}
 
 ## Совет
   
-  ```markdown
-  {% note tip %}
+```markdown
+{% note tip %}
 
-  Это совет.
+Это совет.
 
-  {% endnote %}
-  ```
+{% endnote %}
+```
 
-  {% cut "Результат" %}
+**Результат**
 
-  {% note tip %}
+{% note tip %}
 
-  Это совет.
+Это совет.
 
-  {% endnote %}
+{% endnote %}
 
-  {% endcut %}
+{% endcut %}
 
 ## Важно
 
-  ```markdown
-  {% note warning %}
+```markdown
+{% note warning %}
 
-  Это важная информация.
+Это важная информация.
 
-  {% endnote %}
-  ```
+{% endnote %}
+```
 
-  {% cut "Результат" %}
+**Результат**
 
-  {% note warning %}
+{% note warning %}
 
-  Это важная информация.
+Это важная информация.
 
-  {% endnote %}
-
-  {% endcut %}
+{% endnote %}
   
 ## Внимание
 
-  ```markdown
-  {% note alert %}
+```markdown
+{% note alert %}
 
-  Это предупреждение.
+Это предупреждение.
 
-  {% endnote %}
-  ```
+{% endnote %}
+```
 
-  {% cut "Результат" %}
+**Результат**
 
-  {% note alert %}
+{% note alert %}
 
-  Это предупреждение.
+Это предупреждение.
 
-  {% endnote %}
-
-  {% endcut %}
+{% endnote %}

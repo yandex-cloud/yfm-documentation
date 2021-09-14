@@ -1,4 +1,5 @@
 # Плагины
+
 Помимо базового синтаксиса [CommonMark Spec](https://spec.commonmark.org/), YFM предоставляет набор плагинов с дополнительными возможностями и уникальными элементами разметки.
 
 {% include [plugins.md](../_includes/plugins.md) %}

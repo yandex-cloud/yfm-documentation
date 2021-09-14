@@ -1,4 +1,5 @@
 disableLiquid: true
+allowHTML: true
 langs: ['ru']
 
 docs-viewer:

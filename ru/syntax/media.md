@@ -1,4 +1,5 @@
 # Медиа
+
 ## Изображения {#images}
 
 {% note warning %}
@@ -18,19 +19,19 @@
   * `=100x100` — размер изображения. Необязательный параметр.
 
 ### Изображение-ссылка {#image-link}
+
 Вы можете сделать изображение кликабельным, используя [правила оформления ссылок](./links.md). Для этого добавьте стандартную разметку изображения в ту часть, которая предназначена для указания текста ссылки.
 
 ```markdown
 [![An old rock in the desert](../../_images/mountain.jpg "Mountain" =100x200)](https://yandex.com/images/search?text=mountain)
 ```
 
-{% cut "Результат" %}
+**Результат**
 
 [![An old rock in the desert](../../_images/mountain.jpg "Mountain" =100x200)](https://yandex.com/images/search?text=mountain)
 
-{% endcut %}
-
 ### Reference-style разметка для изображений {#reference-style}
+
 Аналогично [reference-style ссылкам](./links.md#reference-style), вы можете один раз объявить изображение в специальном месте, а в остальном документе обращаться к нему по метке. Это позволит использовать изображение несколько раз, не перегружая текст длинными URL или другими параметрами.
 
 ```markdown
@@ -39,14 +40,11 @@
 [image1]: ../../_images/mountain.jpg "Mountain"
 ```
 
-{% cut "Результат" %}
+**Результат**
 
 ![An old rock in the desert][image1]
 
 [image1]: ../../_images/mountain.jpg "Mountain"
-
-{% endcut %}
-
 
 ## Видео {#video}
 
