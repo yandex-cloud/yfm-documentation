@@ -1,26 +1,33 @@
 title: Yandex Flavored Markdown
-href: index.yaml
 items:
+  - name: Yandex Flavored Markdown
+    href: index.md
   - name: Синтаксис
     items:
       - name: Обзор
         href: syntax/index.md
-      - name: Строчное форматирование
-        href: syntax/line.md
-      - name: Заголовки и блоки текста
-        href: syntax/block.md
+      - name: Базовая разметка
+        href: syntax/base.md
       - name: Списки
         href: syntax/lists.md
       - name: Таблицы
-        href: syntax/tables.md
+        href: syntax/tables.md      
       - name: Заметки
-        href: syntax/notes.md 
+        href: syntax/notes.md
+      - name: Каты и табы
+        href: syntax/cuts-tabs.md
       - name: Ссылки
         href: syntax/links.md
       - name: Медиа
         href: syntax/media.md
+      - name: Фрагменты кода
+        href: syntax/code.md
+      - name: Комментарии и метаданные
+        href: syntax/meta.md
       - name: Переменные
         href: syntax/vars.md
+      - name: Дополнительные возможности
+        href: syntax/additional.md
   - name: Настройки
     href: settings.md  
   - name: Инструменты
@@ -40,7 +47,9 @@ items:
           - name: Настройки
             href: tools/docs/settings.md
           - name: Сборка в YFM
-            href: tools/docs/md2md.md 
+            href: tools/docs/md2md.md
+          - name: Одностраничная сборка
+            href: tools/docs/singlepage.md
           - name: Выкладка на S3
             href: tools/docs/publish-s3.md          
   - name: Плагины

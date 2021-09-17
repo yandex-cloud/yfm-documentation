@@ -1,6 +1,7 @@
 # Улучшение продукта
 
 Исходные файлы этого документа и инструментов YFM хранятся в репозиториях:
+
 * [Документация YFM](https://github.com/yandex-cloud/yfm-documentation)
 * [Transformer](https://github.com/yandex-cloud/yfm-transform)
 * [Builder](https://github.com/yandex-cloud/docs)
@@ -8,6 +9,7 @@
 ## Планы по улучшению {#future-releases}
 
 В следующих релизах YFM планируется добавление функций:
+
 * cтатический линтер;
 * генераторы YFM из proto, openAPI, автосгенерированной документации java, python, c++, go;
 * индекс удовлетворенности пользователей на страницах документации (CSAT);

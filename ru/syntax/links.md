@@ -61,3 +61,21 @@ My favorite search engine is [Yandex][1].
 My favorite search engine is [Yandex][1].
 
 [1]: https://yandex.com/ "The best search engine"
+
+## Начертание текста ссылки {#formatting}
+
+К тексту ссылки можно применять [строчное форматирование](./base.md#line).
+
+```markdown
+I love the **[Yandex Cloud](https://cloud.yandex.com)**.
+This is the _[YFM Guide](https://yadocs.tech)_.
+See the section on [`code`](#code).
+Super [^men^](https://en.wikipedia.org/wiki/Major_Grom_(2017_film)).
+```
+
+**Результат**
+
+I love the **[Yandex Cloud](https://cloud.yandex.com)**.
+This is the _[YFM Guide](https://yadocs.tech)_.
+See the section on [`code`](#code).
+Super [^men^](https://en.wikipedia.org/wiki/Major_Grom_(2017_film)).
