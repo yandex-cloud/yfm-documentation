@@ -2,7 +2,7 @@
 
 [@doc-tools/transform](https://www.npmjs.com/package/@doc-tools/transform) — пакет для трансформации Yandex Flavored Markdown в HTML.
 
-Используйте его в своем коде для работы с текстом во время выполнения программы. Например, чтобы отображать пользовательские сообщения.
+Используйте его в своем коде для работы с текстом во время выполнения программы. Например, чтобы отображать пользовательский контент.
 
 ## Установка {#install}
 
@@ -12,7 +12,7 @@
     npm i @doc-tools/transform
     ```
 
-1. Подключите пакет в своем коде, используя функцию `require()`:
+1. Подключите пакет в своем коде, используя функцию `require()` или `import()`:
 
     ```javascript
     const transform = require('@doc-tools/transform');
@@ -61,6 +61,5 @@ const vars = { user: { name: 'Alice' } };
 const {
     result: {html, meta, title, headings},
     logs,
-    } = transform(content, {vars});
-    
+    } = transform(content, {vars});    
 ```

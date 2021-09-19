@@ -14,4 +14,4 @@
 * [Комментарии и метаданные](./meta.md)
 * [Переменные](./vars.md)
 
-Помимо элементов, включенных в пакет, доступны [дополнительные возможности](./additional.md). Их можно подключить с помощью [плагинов для markdown-it](https://www.npmjs.com/search?q=keywords:markdown-it-plugin). 
+Кроме элементов, включенных в пакет, доступны [дополнительные возможности](./additional.md). Их можно подключить с помощью [плагинов для markdown-it](https://www.npmjs.com/search?q=keywords:markdown-it-plugin). 

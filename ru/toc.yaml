@@ -72,7 +72,7 @@ items:
         href: project/config.md 
       - name: Переиспользование контента
         href: project/includes.md       
-  - name: Улучшение продукта
+  - name: Внесение изменений
     href: contribution.md
   - name: Релизы YFM
     href: changelog.md

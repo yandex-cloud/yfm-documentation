@@ -2,7 +2,7 @@
 
 **Yandex Flavored Markdown (YFM)** — это диалект Markdown, а также набор инструментов для [непрерывной трансформации](./tools/transform/index.md) Markdown в HTML и [сборки](./tools/docs/index.md) полноценных документационных проектов.
 
-* поддерживает [CommonMark Spec](https://spec.commonmark.org/);
+* соответствует [CommonMark Spec](https://spec.commonmark.org/);
 * предоставляет собственный [набор плагинов](./plugins/index.md) с дополнительными возможностями и элементами разметки;
 * [быстрый](https://www.npmjs.com/package/markdown-it#benchmark);
 * расширяемый: можно [подключить](./plugins/import.md) любой плагин для markdown-it или [написать свой](https://github.com/markdown-it/markdown-it/tree/master/docs);
@@ -20,6 +20,7 @@
 * [Каты и табы](./syntax/cuts-tabs.md)
 * [Видео](./syntax/media.md#video)
 * [Переменные](./syntax/vars.md)
+* [Переиспользование контента](./project/includes.md)
 
 Подробнее о всех элементах разметки в разделе [Синтаксис](./syntax/index.md).
 
@@ -31,7 +32,7 @@
 
 * [Оглавление документа](./project/toc.md).
 * [Разводящие страницы](./project/leading-page.md) для быстрой навигации.
-* [Пресеты переменных](./project/presets.md), чтобы поддерживать несколько версий документации из одних и тех же исходных файлов.
+* [Пресеты переменных](./project/presets.md), чтобы поддерживать несколько вариантов документации из одних и тех же исходных файлов.
 * [Переиспользование контента](./project/includes.md).
 * Пользовательские настройки отображения:
     * Широкий формат;
@@ -39,11 +40,11 @@
     * Темная тема;
     * Размер текста.
   
-  Чтобы попробовать, нажмите ![settings-icon](./_images/user-settings.png) в верхнем правом углу.
+  Вы можете изменить настройки прямо сейчас: нажмите ![settings-icon](./_images/user-settings.png) в верхнем правом углу.
   
-Помимо стандартной сборки всех файлов в HTML, доступны [одностраничная сборка](./tools/docs/singlepage.md) и [сборка в YFM](./tools/docs/md2md.md).
+Кроме стандартной сборки всех файлов в HTML, доступны [одностраничная сборка](./tools/docs/singlepage.md) и [сборка в YFM](./tools/docs/md2md.md).
 
-## Планы по улучшению {#future-releases}
+## В разработке {#future-releases}
 
 В следующих релизах YFM планируется добавление функций:
 

@@ -4,16 +4,17 @@ YFM использует [markdown-it](https://www.npmjs.com/package/markdown-it
 
 ## Подключение {#require}
 
+Перед подключением установите пакет с нужным плагином с помощью команды `npm i <имя_плагина>`. Например, чтобы установить [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji), выполните:
+
+```shell
+npm i markdown-it-emoji
+```
+
 {% list tabs %}
 
 - Transformer
 
-   1. Установите пакет с нужным плагином:    
-      ```shell
-      npm i <имя_плагина>
-      ```
-
-   1. Подключите плагин в своем коде, используя функцию `require()`:  
+   1. Подключите плагин в своем коде, используя функцию `require()` или `import()`:  
       ```javascript
       const plugin1 = require('<имя_плагина>');
       ```
@@ -22,6 +23,18 @@ YFM использует [markdown-it](https://www.npmjs.com/package/markdown-it
       ```javascript
       const {result: {html, meta}, logs} = transform(content, {plugins: [<имя_плагина>]});
       ```
+   
+   **Пример:**
+   ```javascript
+   const fs = require('fs');
+   const transform = require('@doc-tools/transform');
+   const cut = require('@doc-tools/transform/lib/plugins/cut');
+   const sup = require('@doc-tools/transform/lib/plugins/sup');
+   const emoji = require('markdown-it-emoji');
+   const content = fs.readFileSync(filePath, 'utf');
+   const {result: {html, meta}, logs} = transform(content, {plugins: [cut, sup, emoji]});
+   ```
+
    {% note warning %}
 
    При переопределении параметра `plugins` необходимо заново подключать [плагины YFM](index.md). Для этого импортируйте их из пакета `@doc-tools/transform` и передайте в массиве плагинов. 
@@ -30,16 +43,11 @@ YFM использует [markdown-it](https://www.npmjs.com/package/markdown-it
 
 - Builder
 
-   1. Установите пакет с нужным плагином:    
-      ```shell
-      npm i <имя_плагина>
-      ```
-
-   1. Перенесите его в папку `./plugins` в пакете `@doc-tools/docs`.
+   1. Перенесите установленный плагин в папку `./plugins` в пакете `@doc-tools/docs`.
 
    {% note tip %}
 
-   Чтобы не повторять эти действия перед каждой сборкой, соберите собственный Builder:
+   Чтобы не переносить необходимые плагины перед каждой сборкой, соберите собственный Builder:
    * Установите исходный код с [GitHub](https://github.com/yandex-cloud/yfm-docs).
    * Перенесите дополнительные плагины в папку `./plugins`.
    * Соберите Builder по [инструкции с GitHub](https://github.com/yandex-cloud/yfm-docs#installation-1).
