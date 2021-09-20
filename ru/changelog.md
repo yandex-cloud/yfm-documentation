@@ -14,8 +14,8 @@
 
 * YFM можно использовать на клиенте.
 * Изменена схема подключения плагинов.
-* Плагин markdown-it-attrs всегда подключен. 
-* Пакет highlight.js необходимо устанавливать самостоятельно.
+* Плагин [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs) всегда подключен. 
+* Пакет [highlight.js](https://www.npmjs.com/package/highlight.js) необходимо устанавливать самостоятельно.
 
 ## Июль 2021
 
