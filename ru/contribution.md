@@ -1,17 +1,11 @@
-# Contribution
+# Внесение изменений
 
-## Репозитории
+Исходные файлы этого документа и инструментов YFM хранятся в репозиториях:
 
-[YFM-transform](https://github.com/yandex-cloud/yfm-transform).
+* [Документация YFM](https://github.com/yandex-cloud/yfm-documentation)
+* [Transformer](https://github.com/yandex-cloud/yfm-transform)
+* [Builder](https://github.com/yandex-cloud/docs)
 
-[YFM-docs](https://github.com/yandex-cloud/docs).
+Баги и предложения по улучшению можно заводить в виде GitHub issues в соответствующем репозитории.
 
-[Документация по YFM](https://github.com/yandex-cloud/yfm-documentation).
-
-## Тикеты
-
-Баги и предложения по улучшению нужно заводить в виде GitHub issues в соответствующем репозитории.
-
-## Внесение изменений
-
-Изменения вносятся через пулл-реквест из своего форка. Овнер репозитория ставит апрув, мерджит и паблишит новую версию NPM пакета.
+Чтобы внести изменения, создайте пулл-реквест из своего форка. Правки будут рассмотрены владельцем репозитория.

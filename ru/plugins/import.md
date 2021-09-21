@@ -1,41 +1,61 @@
-# Использование дополнительных плагинов
+# Подключить дополнительный плагин
+
+YFM использует [markdown-it](https://www.npmjs.com/package/markdown-it) в качестве парсера, поэтому вы можете подключить любой плагин из [списка плагинов для markdown-it](https://www.npmjs.com/search?q=keywords:markdown-it-plugin).
 
 ## Подключение {#require}
 
-### Если вы используете [Transformer](../tools/transform/index.md) {#transformer}
+Перед подключением установите пакет с нужным плагином с помощью команды `npm i <имя_плагина>`. Например, чтобы установить [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji), выполните:
 
-1. Установите npm пакет с нужным вам плагином, например, [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji).
-
-   `npm i markdown-it-emoji`
-
-2. Подключите его в своем коде.
-3. Передайте массив необходимых плагинов в параметре `plugins`.
-
-```javascript
-const fs = require('fs');
-const transform = require('@doc-tools/transform');
-const cut = require('@doc-tools/transform/lib/plugins/cut');
-const sup = require('@doc-tools/transform/lib/plugins/sup');
-const emoji = require('markdown-it-emoji');
-
-const content = fs.readFileSync(filePath, 'utf');
-
-const {result: {html, meta}, logs} = transform(content, {plugins: [cut, sup, emoji]});
+```shell
+npm i markdown-it-emoji
 ```
 
-{% note warning %}
+{% list tabs %}
 
-При передаче параметра `plugins` дефолтные плагины не подключаются. Если они вам нужны, то вам необходимо импортировать их из пакета `@doc-tools/transform` и передать в массиве подключаемых плагинов. Актуальный набор дефолтных плагинов вы всегда можете посмотреть в [этой документации](./default.md).
+- Transformer
 
-{% endnote %}
+   1. Подключите плагин в своем коде, используя функцию `require()` или `import()`:  
+      ```javascript
+      const plugin1 = require('<имя_плагина>');
+      ```
 
-### Если вы используете [Builder](../tools/docs/index.md) {#builder}
+   1. В параметре `plugins` добавьте новый плагин в массив:
+      ```javascript
+      const {result: {html, meta}, logs} = transform(content, {plugins: [<имя_плагина>]});
+      ```
+   
+   **Пример:**
+   ```javascript
+   const fs = require('fs');
+   const transform = require('@doc-tools/transform');
+   const cut = require('@doc-tools/transform/lib/plugins/cut');
+   const sup = require('@doc-tools/transform/lib/plugins/sup');
+   const emoji = require('markdown-it-emoji');
+   const content = fs.readFileSync(filePath, 'utf');
+   const {result: {html, meta}, logs} = transform(content, {plugins: [cut, sup, emoji]});
+   ```
 
-1. Установите npm пакет с нужным вам плагином, например, [markdown-it-emoji](https://www.npmjs.com/package/markdown-it-emoji).
-2. Переложите его в папку `./plugins` в пакете `@doc-tools/docs`.
+   {% note warning %}
 
-Чтобы не делать это постоянно, вы можете собрать собственную сборку Builder. Для этого нужно скачать [исходники из GitHub](https://github.com/yandex-cloud/yfm-docs), подложить дополнительные плагины в папку `./plugins` и [собрать Builder](https://github.com/yandex-cloud/yfm-docs#installation-1).
+   При переопределении параметра `plugins` необходимо заново подключать [плагины YFM](index.md). Для этого импортируйте их из пакета `@doc-tools/transform` и передайте в массиве плагинов. 
+
+   {% endnote %}   
+
+- Builder
+
+   1. Перенесите установленный плагин в папку `./plugins` в пакете `@doc-tools/docs`.
+
+   {% note tip %}
+
+   Чтобы не переносить необходимые плагины перед каждой сборкой, соберите собственный Builder:
+   * Установите исходный код с [GitHub](https://github.com/yandex-cloud/yfm-docs).
+   * Перенесите дополнительные плагины в папку `./plugins`.
+   * Соберите Builder по [инструкции с GitHub](https://github.com/yandex-cloud/yfm-docs#installation-1).
+
+   {% endnote %}
+
+{% endlist %}
 
 ## Передача параметров {#options}
 
-YFM пробрасывает все неизвестные ему параметры из переданного объекта `options` во все плагины. Поэтому, если вам нужно передать какие-то параметры дополнительному плагину, то просто добавьте их в объект `options`.
+YFM применяет неизвестные параметры из объекта `options` ко всем плагинам, поэтому для передачи параметров добавьте их в объект `options`.

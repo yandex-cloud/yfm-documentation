@@ -1,12 +1,35 @@
 title: Yandex Flavored Markdown
 items:
-  - name: YFM
-    # общее описание что такое YFM, типа лендос
+  - name: Yandex Flavored Markdown
     href: index.md
   - name: Синтаксис
-    href: syntax.md
+    items:
+      - name: Обзор
+        href: syntax/index.md
+      - name: Базовая разметка
+        href: syntax/base.md
+      - name: Списки
+        href: syntax/lists.md
+      - name: Таблицы
+        href: syntax/tables.md      
+      - name: Заметки
+        href: syntax/notes.md
+      - name: Каты и табы
+        href: syntax/cuts-tabs.md
+      - name: Ссылки
+        href: syntax/links.md
+      - name: Медиа
+        href: syntax/media.md
+      - name: Фрагменты кода
+        href: syntax/code.md
+      - name: Комментарии и метаданные
+        href: syntax/meta.md
+      - name: Переменные
+        href: syntax/vars.md
+      - name: Дополнительные возможности
+        href: syntax/additional.md
   - name: Настройки
-    href: settings.md
+    href: settings.md  
   - name: Инструменты
     items:
       - name: Transformer
@@ -15,43 +38,41 @@ items:
             href: tools/transform/index.md
           - name: Настройки
             href: tools/transform/settings.md
+          - name: Подсветка кода
+            href: tools/transform/highlight.md
       - name: Builder
         items:
           - name: Обзор
             href: tools/docs/index.md
           - name: Настройки
             href: tools/docs/settings.md
-          - name: Выкладка на S3
-            href: tools/docs/S3.md
-          - name: Одностраничная сборка
-            href: tools/docs/singlePage.md
-          - name: Сборка из YFM в YFM
+          - name: Сборка в YFM
             href: tools/docs/md2md.md
+          - name: Одностраничная сборка
+            href: tools/docs/singlepage.md
+          - name: Выкладка на S3
+            href: tools/docs/publish-s3.md          
   - name: Плагины
     items:
       - name: Обзор
-        href: plugins/overview.md
-      - name: Доступные из коробки
-        href: plugins/default.md
-      - name: Как подключить дополнительные
-        href: plugins/import.md
-  - name: Структура YFM проекта
+        href: plugins/index.md
+      - name: Подключить дополнительный плагин
+        href: plugins/import.md   
+  - name: Организация YFM проекта
     items:
       - name: Обзор
-        # здесь +пример
-        href: project/overview.md
-      - name: Пошаговое руководство
+        href: project/index.md
       - name: Оглавление
         href: project/toc.md
       - name: Разводящая страница
         href: project/leading-page.md
       - name: Пресеты переменных
         href: project/presets.md
-      - name: Переиспользование контента
-        href: project/includes.md
       - name: Файл конфигурации
-        href: project/config.md
-  - name: Contribution
+        href: project/config.md 
+      - name: Переиспользование контента
+        href: project/includes.md       
+  - name: Внесение изменений
     href: contribution.md
-  - name: Chagelog
+  - name: Релизы YFM
     href: changelog.md
