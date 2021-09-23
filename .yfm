@@ -5,6 +5,5 @@ langs: ['ru']
 docs-viewer:
   project-name: yfm-documentation
   favicon-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo_blue_32x32.png
-  logo-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo_blue_32x32.svg
   github-url-prefix: https://github.com/yandex-cloud/yfm-documentation/blob/master
   logo-title: YFM
