@@ -7,4 +7,4 @@ docs-viewer:
   metrika: 85542928
   favicon-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo_blue_32x32.png
   github-url-prefix: https://github.com/yandex-cloud/yfm-documentation/blob/master
-  logo-title: YFM
+  logo-title: Yandex Flavored Markdown
