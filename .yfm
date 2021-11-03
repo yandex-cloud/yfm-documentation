@@ -6,7 +6,7 @@ docs-viewer:
   project-name: yfm-documentation
   metrika: 85542928
   favicon-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo_blue_32x32.png
-  logo-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo.svg
-  logo-dark-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo-dark.svg
+  logo-src: https://storage.yandexcloud.net/docs-external/yfm-documentation/_images/logo.svg
+  logo-dark-src: https://storage.yandexcloud.net/docs-external/yfm-documentation/_images/logo-dark.svg
   github-url-prefix: https://github.com/yandex-cloud/yfm-documentation/blob/master
   logo-title: Yandex Flavored Markdown
