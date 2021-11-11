@@ -8,5 +8,6 @@ docs-viewer:
   favicon-src: https://raw.githubusercontent.com/yandex-cloud/yfm-documentation/master/_images/logo_blue_32x32.png
   logo-src: https://storage.yandexcloud.net/docs-external/yfm-documentation/_images/logo.svg
   logo-dark-src: https://storage.yandexcloud.net/docs-external/yfm-documentation/_images/logo-dark.svg
+  logo-link-preview: https://storage.yandexcloud.net/docs-external/yfm-documentation/_images/share-logo-dark.svg
   github-url-prefix: https://github.com/yandex-cloud/yfm-documentation/blob/master
   logo-title: Yandex Flavored Markdown
