@@ -1,78 +1,78 @@
 title: Yandex Flavored Markdown
 items:
-  - xfarm: Yandex Flavored Markdown
+  - name: Yandex Flavored Markdown
     href: index.md
-  - xfarm: Syntax
+  - name: Syntax
     items:
-      - xfarm: Overview
+      - name: Overview
         href: syntax/index.md
-      - xfarm: Basic markup
+      - name: Basic markup
         href: syntax/base.md
-      - xfarm: Lists
+      - name: Lists
         href: syntax/lists.md
-      - xfarm: Tables
+      - name: Tables
         href: syntax/tables.md
-      - xfarm: Notes
+      - name: Notes
         href: syntax/notes.md
-      - xfarm: Cuts and tabs
+      - name: Cuts and tabs
         href: syntax/cuts-tabs.md
-      - xfarm: Links
+      - name: Links
         href: syntax/links.md
-      - xfarm: Media
+      - name: Media
         href: syntax/media.md
-      - xfarm: Code snippets
+      - name: Code snippets
         href: syntax/code.md
-      - xfarm: Comments and metadata
+      - name: Comments and metadata
         href: syntax/meta.md
-      - xfarm: Variables
+      - name: Variables
         href: syntax/vars.md
-      - xfarm: Additional features
+      - name: Additional features
         href: syntax/additional.md
-  - xfarm: Settings
+  - name: Settings
     href: settings.md
-  - xfarm: Tools
+  - name: Tools
     items:
-      - xfarm: Transformer
+      - name: Transformer
         items:
-          - xfarm: Overview
+          - name: Overview
             href: tools/transform/index.md
-          - xfarm: Settings
+          - name: Settings
             href: tools/transform/settings.md
-          - xfarm: Syntax highlighting
+          - name: Syntax highlighting
             href: tools/transform/highlight.md
-      - xfarm: Builder
+      - name: Builder
         items:
-          - xfarm: Overview
+          - name: Overview
             href: tools/docs/index.md
-          - xfarm: Settings
+          - name: Settings
             href: tools/docs/settings.md
-          - xfarm: Building a project in YFM
+          - name: Building a project in YFM
             href: tools/docs/md2md.md
-          - xfarm: Single-page build
+          - name: Single-page build
             href: tools/docs/singlepage.md
-          - xfarm: Uploading to S3
+          - name: Uploading to S3
             href: tools/docs/publish-s3.md
-  - xfarm: Plugins
+  - name: Plugins
     items:
-      - xfarm: Overview
+      - name: Overview
         href: plugins/index.md
-      - xfarm: Adding additional plugins
+      - name: Adding additional plugins
         href: plugins/import.md
-  - xfarm: Organizing a YFM project
+  - name: Organizing a YFM project
     items:
-      - xfarm: Overview
+      - name: Overview
         href: project/index.md
-      - xfarm: Contents
+      - name: Contents
         href: project/toc.md
-      - xfarm: Leading page
+      - name: Leading page
         href: project/leading-page.md
-      - xfarm: Variable presets
+      - name: Variable presets
         href: project/presets.md
-      - xfarm: Configuration file
+      - name: Configuration file
         href: project/config.md
-      - xfarm: Reusing content
+      - name: Reusing content
         href: project/includes.md
-  - xfarm: Making edits
+  - name: Making edits
     href: contribution.md
-  - xfarm: YFM releases
+  - name: YFM releases
     href: changelog.md
