@@ -1,0 +1,78 @@
+title: Yandex Flavored Markdown
+items:
+  - xfarm: Yandex Flavored Markdown
+    href: index.md
+  - xfarm: Syntax
+    items:
+      - xfarm: Overview
+        href: syntax/index.md
+      - xfarm: Basic markup
+        href: syntax/base.md
+      - xfarm: Lists
+        href: syntax/lists.md
+      - xfarm: Tables
+        href: syntax/tables.md
+      - xfarm: Notes
+        href: syntax/notes.md
+      - xfarm: Cuts and tabs
+        href: syntax/cuts-tabs.md
+      - xfarm: Links
+        href: syntax/links.md
+      - xfarm: Media
+        href: syntax/media.md
+      - xfarm: Code snippets
+        href: syntax/code.md
+      - xfarm: Comments and metadata
+        href: syntax/meta.md
+      - xfarm: Variables
+        href: syntax/vars.md
+      - xfarm: Additional features
+        href: syntax/additional.md
+  - xfarm: Settings
+    href: settings.md
+  - xfarm: Tools
+    items:
+      - xfarm: Transformer
+        items:
+          - xfarm: Overview
+            href: tools/transform/index.md
+          - xfarm: Settings
+            href: tools/transform/settings.md
+          - xfarm: Syntax highlighting
+            href: tools/transform/highlight.md
+      - xfarm: Builder
+        items:
+          - xfarm: Overview
+            href: tools/docs/index.md
+          - xfarm: Settings
+            href: tools/docs/settings.md
+          - xfarm: Building a project in YFM
+            href: tools/docs/md2md.md
+          - xfarm: Single-page build
+            href: tools/docs/singlepage.md
+          - xfarm: Uploading to S3
+            href: tools/docs/publish-s3.md
+  - xfarm: Plugins
+    items:
+      - xfarm: Overview
+        href: plugins/index.md
+      - xfarm: Adding additional plugins
+        href: plugins/import.md
+  - xfarm: Organizing a YFM project
+    items:
+      - xfarm: Overview
+        href: project/index.md
+      - xfarm: Contents
+        href: project/toc.md
+      - xfarm: Leading page
+        href: project/leading-page.md
+      - xfarm: Variable presets
+        href: project/presets.md
+      - xfarm: Configuration file
+        href: project/config.md
+      - xfarm: Reusing content
+        href: project/includes.md
+  - xfarm: Making edits
+    href: contribution.md
+  - xfarm: YFM releases
+    href: changelog.md
