@@ -13,7 +13,7 @@ The content of cuts and tabs can include any YFM markup.
 Use cuts to hide content. For example, additional information or long blocks of code.
 
 ```markdown
-{% cut "Заголовок ката" %}
+{% cut "Cut header" %}
 
 Content displayed when clicked.
 
@@ -22,7 +22,7 @@ Content displayed when clicked.
 
 **Result**
 
-{% cut "Заголовок ката" %}
+{% cut "Cut header" %}
 
 Content displayed when clicked.
 

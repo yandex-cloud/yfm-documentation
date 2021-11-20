@@ -1,6 +1,6 @@
 # Uploading to S3
 
-You can configure the building so that the documentation is automatically uploaded to [S3 storage](https://cloud.yandex.ru/services/storage). To do this, when executing the `yfm` command, specify the `--publish` startup key.
+You can configure the building so that the documentation is automatically uploaded to [S3 storage](https://cloud.yandex.com/services/storage). To do this, when executing the `yfm` command, specify the `--publish` startup key.
 
 You can set layout settings in one of the following ways:
 

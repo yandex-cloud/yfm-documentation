@@ -89,7 +89,7 @@ This is an alert.
 ## Custom header
 
 ```markdown
-{% note info "Свой заголовок" %}
+{% note info "Custom header" %}
 
 This is a note with its own header.
 
@@ -98,7 +98,7 @@ This is a note with its own header.
 
 **Result**
 
-{% note info "Свой заголовок" %}
+{% note info "Custom header" %}
 
 This is a note with its own header.
 

@@ -19,7 +19,7 @@ Reusing content helps reduce the time spent on editing and searching the source 
 1. In sections of a document where you need to insert this text, add a link to the file in the following format:
 
    ```markdown
-   {% include [Описание](../_includes/file.md) %}
+   {% include [Description](../_includes/file.md) %}
    ```
     * `[Description]`: File description. Information about document authors does not affect the build.
     * `(_includes/file.md)`: File path.
@@ -27,7 +27,7 @@ Reusing content helps reduce the time spent on editing and searching the source 
     If you don't need to add the header of the reusable file to the section, add the `notitle` keyword:
 
     ```markdown
-    {% include notitle [Описание](../_includes/file.md) %}
+    {% include notitle [Description](../_includes/file.md) %}
     ```
 
 When building the document, the text of the file is added to the sections in place of the includes. If there are relative links in the file, they are re-assembled.

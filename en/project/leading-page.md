@@ -2,7 +2,7 @@
 
 To quickly navigate the document, you can design a root page in the form of a grid with links to main sections.
 
-**Example**: design of the [Yandex Compute Cloud documentation](https://cloud.yandex.ru/docs/compute/) leading page.
+**Example**: design of the [Yandex Compute Cloud documentation](https://cloud.yandex.com/docs/compute/) leading page.
 
 ![Example of a leading page](../_images/leading.jpg)
 

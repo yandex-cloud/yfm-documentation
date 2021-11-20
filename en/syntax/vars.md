@@ -48,14 +48,14 @@ Some text {% if  OS == 'iOS' %} Apple {% else %} Android {% endif %} text contin
 Use loops to output repetitive content for each element of an array. Inside the loop, refer to the element as a regular variable, using syntax for [substitutions](#subtitudes).
 
 ```
-{% for имя_переменной in имя_массива %}
+{% for variable_name in array_name %}
 
 Some text {{ variable_name }} text continued.
 
 {% endfor %}
 ```
 
-{% cut "Примеры использования циклов" %}
+{% cut "Examples of using loops" %}
 
 Let's say that in a [file with variable presets](../project/presets.md), the `users` array is set:
 
@@ -102,7 +102,7 @@ To apply a filter, add the `|` operator and the filter name to the variable. Sep
 | `capitalize` | Makes the first letter in the variable value upper case. |
 | `length` | Calculates the length of the variable value. |
 
-{% cut "Примеры использования фильтров" %}
+{% cut "Examples of using filters" %}
 
 Let's say the following is set in a [file with variable presets](../project/presets.md):
 
@@ -143,7 +143,7 @@ To invoke a function, add the `.` symbol to the variable, specify its name, and 
 | --- | --- | --- |
 | `slice(beginIndex, endIndex)` | Returns the specified part of the source array as a new array object. | `beginIndex` is an index of the element the selection begins with (numbering starts with 0).</br></br>`endIndex` is an index of the element the selection ends with (numbering starts with 0). If the parameter is omitted, all elements from the starting position to the end of the array are selected. |
 
-{% cut "Примеры использования функций" %}
+{% cut "Examples of using functions" %}
 
 Let's say the following is set in a [file with variable presets](../project/presets.md):
 
