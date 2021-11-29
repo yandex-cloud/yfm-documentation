@@ -90,7 +90,7 @@ To use two spaces at the end of the line instead of a carriage return, in the [s
 
 > Quote
 
-> Nested quotes
+>> Nested quotes
 
 ## Escaping {#escaping}
 
@@ -103,7 +103,8 @@ Super\^script^
 
 **Result**
 
-Super^script^ Super\^script^
+Super^script^
+Super\^script^
 
 ## Using HTML {#html}
 
