@@ -140,7 +140,7 @@ Hello Alice!
 ```yaml
 default:
   user:
-    name: Pavel
+    name: Masha
 ```
 
 Тогда использование функций приведет к следующим результатам:

@@ -150,19 +150,19 @@ Let's say the following is set in a [file with variable presets](../project/pres
 ```yaml
 default:
   user:
-    name: Alice
+    name: Masha
 ```
 
 Then using functions will result in the following:
 
 ```markdown
-Hello A{{ user.name.slice(1) }}!
+Hello P{{ user.name.slice(1) }}!
 
-Hello A{{ user.name.slice(1, 2) }}ice!
+Hello P{{ user.name.slice(1, 2) }}vel!
 ```
 
-Hello Alice!
+Hello Pasha!
 
-Hello Alice!
+Hello Pavel!
 
 {% endcut %}
