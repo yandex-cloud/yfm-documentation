@@ -1,6 +1,6 @@
 disableLiquid: true
 allowHTML: true
-langs: ['ru', 'en']
+langs: ['en', 'ru']
 
 docs-viewer:
   project-name: yfm-documentation
