@@ -79,9 +79,9 @@ Prefix
 Postfix
 ```
 
-Prefix  
-Alice  
-Mark  
+Prefix
+Alice
+Mark
 Postfix
 
 {% endcut %}
