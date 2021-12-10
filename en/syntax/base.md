@@ -8,7 +8,7 @@ Use the markup methods below to format a text fragment in a line.
 | ----- | ----- |
 | `**Bold text**` | **Bold text** |
 | `_Italic_` | _Italic_ |
-| `**_Bold italic_**` | **_ Bold italic_** |
+| `**_Bold italic_**` | **_Bold italic_** |
 | `_**Also bold italic**_` | _**Also bold italic**_ |
 | `~~Strikethrough text~~` | ~~Strikethrough text~~ |
 | `Super^script^` | Super^script^ |
