@@ -15,10 +15,10 @@ To substitute a value with a variable in the text, enter the variable name with 
 Some text {{ variable_name }} text continued.
 ```
 
-If the text contains double curly brackets but doesn't require variable substitution, add `not_var_` before the construction.
+If the text contains double curly brackets but doesn't require variable substitution, add `not_var` before the construction.
 
 ```
-Some text not_var_{{ also_text> }} text continued.
+Some text not_var{{ also_text }} text continued.
 ```
 
 ## Conditional operators {#conditions}
