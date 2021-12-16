@@ -60,6 +60,55 @@ Inserting tables of contents allows you to independently maintain separate secti
     path: another/toc.yaml
 ```
 
+There is also the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
+
+`toc.yaml`:
+
+```yaml
+items:
+  - name: Name1
+    href: file1.md
+    
+  # Missing the name field of the element means that the elements 
+  # of the included table of contents should be added to the same level 
+  # of the table of contents, and not as a new section.
+  - include: { path: path/to/toc.yaml }
+ 
+  - name: NameX
+    href: fileX.md
+```
+`path/to/toc.yaml`:
+
+```yaml
+items:
+  - name: NameA
+    href: fileA.md
+  - name: NameB
+    href: fileB.md
+```
+The result is in the table of contents:
+- Name1
+- NameA
+- NameB
+- NameX
+
+### mode {#include-mode}
+
+`include` may contain the `mode` child element.
+`mode` - the mode of inclusion of the table of contents.
+
+Possible values: `root_merge`, `merge`, `link`. Default value: `root_merge`.
+
+Differences:
+- `merge` и `link` - `path` is relative to the table of contents in which the inclusion occurs.
+- `root_merge` - `path` is relative to the root of the documentation.
+- `root_merge` и `merge` - all files and directories located next to the included table of contents 
+are moved to the directory of the table of contents in which the inclusion occurs. Moving occurs with overwriting of files.
+Since the project structure changes during moving, a `sourcePath` with the path to the source file is added to the metadata of the files.
+This field is used for a link to edit the page.
+- `link` - the project structure does not change. All links of the included table of contents are changed to links relative 
+to the table of contents in which the inclusion occurs.
+
 ## Hidden sections {#hidden}
 
 To make a section accessible only by a direct link and excluded it from the table of contents, specify the `hidden` parameter.

@@ -1,5 +1,59 @@
 # История изменений
 
+
+## Декабрь 2021
+
+### yfm-docs
+
+#### 1.17.0
+
+* Не удаляем not_var при output-format=md
+
+#### 1.16.0
+
+* Добавлены режимы включения оглавления: `root_merge`, `merge`, `link`. [Подробнее](./project/toc.md#include-mode)
+
+* При включении оглавления в режимах `root_merge` и `merge`, будет добавлен оригинальный путь до исходников 
+в `sourcePath` поле мета информации
+
+## Ноябрь 2021
+
+### yfm-docs
+
+#### 1.15.0
+
+* Добавлена возможность включать `toc.yaml` с добавлением его элементов на тот же уровень оглавления. 
+
+  `toc.yaml`:
+  
+  ```yaml
+  items:
+    - name: Name1
+      href: file1.md
+      
+    # Отсутствие поля name у элемента означает, что элементы включаемого оглавления стоит
+    # добавлять на тот же уровень оглавления, а не как новый раздел
+    - include: { path: path/to/toc.yaml }
+   
+    - name: NameX
+      href: fileX.md
+  ```
+  `path/to/toc.yaml`:
+  
+  ```yaml
+  items:
+    - name: NameA
+      href: fileA.md
+    - name: NameB
+      href: fileB.md
+  ```
+  Результат в оглавлении:
+  - Name1
+  - NameA
+  - NameB
+  - NameX
+ 
+
 ## Сентябрь 2021
 
 ### yfm-docs
