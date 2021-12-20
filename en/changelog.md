@@ -25,36 +25,8 @@ to the `sourcePath` meta field
 #### 1.15.0
 
 * Added the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
-
-  `toc.yaml`:
   
-  ```yaml
-  items:
-    - name: Name1
-      href: file1.md
-      
-    # Missing the name field of the element means that the elements 
-    # of the included table of contents should be added to the same level 
-    # of the table of contents, and not as a new section.
-    - include: { path: path/to/toc.yaml }
-   
-    - name: NameX
-      href: fileX.md
-  ```
-  `path/to/toc.yaml`:
-  
-  ```yaml
-  items:
-    - name: NameA
-      href: fileA.md
-    - name: NameB
-      href: fileB.md
-  ```
-  The result is in the table of contents:
-  - Name1
-  - NameA
-  - NameB
-  - NameX
+  [Read more](./project/toc.md#include-as-pages)
 
 ## September 2021
 

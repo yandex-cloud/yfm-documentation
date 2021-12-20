@@ -54,11 +54,15 @@ You can include the table of contents of another document (a different `toc.yaml
 
 Inserting tables of contents allows you to independently maintain separate sections and build a document from large blocks.
 
+### Example with inclusion of the table of contents as a section {#include-as-section}
+
 ```yaml
 - name: Name of an imported block
   include:
     path: another/toc.yaml
 ```
+
+### Example with inclusion of a table of contents without creating a section {#include-as-pages}
 
 There is also the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
 
