@@ -27,6 +27,11 @@ to the `sourcePath` meta field
 * Added the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
   
   [Read more](./project/toc.md#include-as-pages)
+  
+#### 1.14.0
+
+* Added the ability to [configure the linter](https://github.com/yandex-cloud/yfm-docs/blob/master/DOCS.md#linter-configuration-file-)
+ 
 
 ## September 2021
 
