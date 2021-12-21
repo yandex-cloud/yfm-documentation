@@ -11,7 +11,7 @@ items:
       - name: Списки
         href: syntax/lists.md
       - name: Таблицы
-        href: syntax/tables.md      
+        href: syntax/tables.md
       - name: Заметки
         href: syntax/notes.md
       - name: Каты и табы
@@ -29,7 +29,7 @@ items:
       - name: Дополнительные возможности
         href: syntax/additional.md
   - name: Настройки
-    href: settings.md  
+    href: settings.md
   - name: Инструменты
     items:
       - name: Transformer
@@ -51,13 +51,13 @@ items:
           - name: Одностраничная сборка
             href: tools/docs/singlepage.md
           - name: Выкладка на S3
-            href: tools/docs/publish-s3.md          
+            href: tools/docs/publish-s3.md
   - name: Плагины
     items:
       - name: Обзор
         href: plugins/index.md
       - name: Подключить дополнительный плагин
-        href: plugins/import.md   
+        href: plugins/import.md
   - name: Организация YFM проекта
     items:
       - name: Обзор
@@ -69,9 +69,11 @@ items:
       - name: Пресеты переменных
         href: project/presets.md
       - name: Файл конфигурации
-        href: project/config.md 
+        href: project/config.md
       - name: Переиспользование контента
-        href: project/includes.md       
+        href: project/includes.md
+      - name: Файл конфигурации линтера
+        href: project/lint.md
   - name: Внесение изменений
     href: contribution.md
   - name: Релизы YFM

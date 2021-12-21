@@ -72,6 +72,8 @@ items:
         href: project/config.md
       - name: Reusing content
         href: project/includes.md
+      - name: Linter configuration file
+        href: project/lint.md
   - name: Making edits
     href: contribution.md
   - name: YFM releases
