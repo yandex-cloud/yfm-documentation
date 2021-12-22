@@ -1,5 +1,36 @@
 # Revision history
 
+## December 2021
+
+### yfm-docs
+
+#### 1.17.0
+
+* After pre-processing the documentation (with output-format=md), we do not remove not_var from the syntax similar to variables
+  [Substitutions](./syntax/vars.md#subtitudes)
+
+#### 1.16.0
+
+* Added modes for including toc: `root_merge`, `merge`, `link`. [Read more](./project/toc.md#include-mode)
+
+* If the toc includes another one under the `root_merge` and `merge` modes, the original path will be added
+to the `sourcePath` meta field
+
+## November 2021
+
+### yfm-docs
+
+#### 1.15.0
+
+* Added the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
+  
+  [Read more](./project/toc.md#include-as-pages)
+  
+#### 1.14.0
+
+* Added the ability to [configure the linter](./project/lint.md)
+ 
+
 ## September 2021
 
 ### yfm-docs
