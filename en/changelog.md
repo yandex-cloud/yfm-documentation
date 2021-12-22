@@ -6,7 +6,8 @@
 
 #### 1.17.0
 
-* Don't remove not_var when output-format=md
+* After pre-processing the documentation (with output-format=md), we do not remove not_var from the syntax similar to variables
+  [Substitutions](./syntax/vars.md#subtitudes)
 
 #### 1.16.0
 
@@ -14,9 +15,6 @@
 
 * If the toc includes another one under the `root_merge` and `merge` modes, the original path will be added
 to the `sourcePath` meta field
-
-
-### yfm-docs
 
 ## November 2021
 
@@ -30,7 +28,7 @@ to the `sourcePath` meta field
   
 #### 1.14.0
 
-* Added the ability to [configure the linter](https://github.com/yandex-cloud/yfm-docs/blob/master/DOCS.md#linter-configuration-file-)
+* Added the ability to [configure the linter](./project/lint.md)
  
 
 ## September 2021
