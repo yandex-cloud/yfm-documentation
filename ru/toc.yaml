@@ -11,7 +11,11 @@ items:
       - name: Списки
         href: syntax/lists.md
       - name: Таблицы
-        href: syntax/tables.md
+        items:
+          - name: GFM Tables
+            href: syntax/tables/gfm.md
+          - name: Многострочные таблицы
+            href: syntax/tables/multiline.md
       - name: Заметки
         href: syntax/notes.md
       - name: Каты и табы

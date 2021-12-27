@@ -11,7 +11,11 @@ items:
       - name: Lists
         href: syntax/lists.md
       - name: Tables
-        href: syntax/tables.md
+        items:
+          - name: GFM Tables
+            href: syntax/tables/gfm.md
+          - name: Multiline tables
+            href: syntax/tables/multiline.md
       - name: Notes
         href: syntax/notes.md
       - name: Cuts and tabs

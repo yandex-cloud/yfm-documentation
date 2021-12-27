@@ -4,17 +4,31 @@
 
 ### yfm-docs
 
+#### 1.18.0
+
+Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multiline tables](./syntax/tables/multiline.md).
+
 #### 1.17.0
 
-* After pre-processing the documentation (with output-format=md), we do not remove not_var from the syntax similar to variables
+* After pre-processing the documentation (with output-format=md), we do not remove not_var from the syntax similar to variables.
   [Substitutions](./syntax/vars.md#subtitudes)
 
 #### 1.16.0
 
-* Added modes for including toc: `root_merge`, `merge`, `link`. [Read more](./project/toc.md#include-mode)
+* Added modes for including toc: `root_merge`, `merge`, `link`. [Read more](./project/toc.md#include-mode).
 
 * If the toc includes another one under the `root_merge` and `merge` modes, the original path will be added
-to the `sourcePath` meta field
+to the `sourcePath` meta field.
+* 
+### yfm-transform
+
+#### 2.4.0
+
+* [Multiline tables](./syntax/tables/multiline.md) enabled by default.
+
+#### 2.3.0
+
+* Added support [monospaced text](./syntax/base.md).
 
 ## November 2021
 
@@ -29,7 +43,20 @@ to the `sourcePath` meta field
 #### 1.14.0
 
 * Added the ability to [configure the linter](./project/lint.md)
- 
+
+### yfm-transform
+
+#### 2.2.0
+
+* Added the ability to redefine delimiters in the plugin [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs).
+
+## October 2021
+
+### yfm-transform
+
+#### 2.1.0
+
+* Added beta-plugin for support multiline tables.
 
 ## September 2021
 

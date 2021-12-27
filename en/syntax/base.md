@@ -4,14 +4,15 @@
 
 Use the markup methods below to format a text fragment in a line.
 
-| Markup | Result |
-| ----- | ----- |
-| `**Bold text**` | **Bold text** |
-| `_Italic_` | _Italic_ |
-| `**_Bold italic_**` | **_Bold italic_** |
+| Markup                   | Result |
+|--------------------------| ----- |
+| `**Bold text**`          | **Bold text** |
+| `_Italic_`               | _Italic_ |
+| `**_Bold italic_**`      | **_Bold italic_** |
 | `_**Also bold italic**_` | _**Also bold italic**_ |
 | `~~Strikethrough text~~` | ~~Strikethrough text~~ |
-| `Super^script^` | Super^script^ |
+| `Super^script^`          | Super^script^ |
+| `##Monospaced text##`    | ##Monospaced text##
 
 To use subscript or underlined text, you need to add additional plugins. For more information, see [Additional features](./additional.md).
 
