@@ -6,7 +6,7 @@ To format text, the following is used:
 
 * [Basic markup](./base.md)
 * [Lists](./lists.md)
-* [Tables](./tables.md)
+* [GFM](./tables/gfm.md) and [multiline tables](./tables/multiline.md)
 * [Notes](./notes.md)
 * [Cuts and tabs](./cuts-tabs.md)
 * [Links](./links.md)

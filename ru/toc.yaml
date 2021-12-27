@@ -15,7 +15,7 @@ items:
           - name: GFM Tables
             href: syntax/tables/gfm.md
           - name: Многострочные таблицы
-            href: syntax/tables/wiki.md
+            href: syntax/tables/multiline.md
       - name: Заметки
         href: syntax/notes.md
       - name: Каты и табы
