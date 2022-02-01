@@ -23,6 +23,7 @@ The name of the startup key corresponds to the name of the setting.
 | `--remove-hidden-toc-items` | Remove hidden pages from the build result. Disabled by default. |
 | `--version`                 | Current version. |
 | `--disableLint`             | Should whether to turn off a linter |
+| `--add-map-file`            | Should add all paths of documentation into file.json. Disabled by default. |
 
 To view the full list of keys, run the `yfm --help` command.
 
