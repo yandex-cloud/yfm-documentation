@@ -22,7 +22,8 @@ The name of the startup key corresponds to the name of the setting.
 | `--add-system-meta`         | Add variables from the system presets section to [metadata](../../syntax/meta.md#meta) files. Disabled by default. |
 | `--remove-hidden-toc-items` | Remove hidden pages from the build result. Disabled by default. |
 | `--version`                 | Current version. |
-| `--disableLint`             | Should whether to turn off a linter |
+| `--lint-disabled`           | Should whether to turn off a linter |
+| `--build-disabled`          | Should whether to turn off a build |
 
 To view the full list of keys, run the `yfm --help` command.
 
