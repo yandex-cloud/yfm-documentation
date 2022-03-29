@@ -8,10 +8,10 @@ For more information about how to add additional plugins, see the  [instructions
 
 **Plugin:** [markdown-it-sub](https://www.npmjs.com/package/markdown-it-sub)
 
-To output a character in subscript, add `-` on both sides.
+To output a character in subscript, add `~` on both sides.
 
 ```markdown
-H-2-O
+H~2~O
 ```
 
 You can vote to include subscript support in YFM by default in [GitHub issues](https://github.com/yandex-cloud/yfm-transform/issues/70).
@@ -70,4 +70,3 @@ The plugin uses the KaTeX library to display mathematical symbols. Example of a 
 ```markdown
 $\sqrt{3x-1}+(1+x)^2$
 ```
-
