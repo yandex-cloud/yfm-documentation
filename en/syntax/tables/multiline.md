@@ -78,7 +78,7 @@ Text after other table||
 |#
 ```
 
-**Результат**
+**Result**
 
 #|
 || 1
