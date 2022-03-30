@@ -104,9 +104,9 @@ The result is in the table of contents:
 Possible values: `root_merge`, `merge`, `link`. Default value: `root_merge`.
 
 Differences:
-- `merge` и `link` - `path` is relative to the table of contents in which the inclusion occurs.
+- `merge` and `link` - `path` is relative to the table of contents in which the inclusion occurs.
 - `root_merge` - `path` is relative to the root of the documentation.
-- `root_merge` и `merge` - all files and directories located next to the included table of contents 
+- `root_merge` and `merge` - all files and directories located next to the included table of contents 
 are moved to the directory of the table of contents in which the inclusion occurs. Moving occurs with overwriting of files.
 Since the project structure changes during moving, a `sourcePath` with the path to the source file is added to the metadata of the files.
 This field is used for a link to edit the page.
