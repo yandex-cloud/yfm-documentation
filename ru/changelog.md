@@ -19,7 +19,7 @@
 #### 1.19.0
 
 - Линтер запускается параллельно со сборкой
-- Поддержаны аргументы `--link-disabled` и `--build-disabled`, по умолчанию имеют значение `false`.
+- Поддержаны аргументы `--link-disabled`, `--build-disabled` и `--add-map-file`, по умолчанию имеют значение `false`.
   [Подробнее](tools/docs/settings.md)
 
 ### yfm-transform
