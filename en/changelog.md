@@ -19,7 +19,7 @@ Supported using of symlinks with a relative path
 #### 1.19.0
 
 - The linter runs in parallel with the build
-- The arguments `--link-disabled` and `--build-disabled` are supported, by default they have the value `false`.
+- The arguments `--link-disabled`, `--build-disabled` and `--add-map-file` are supported, by default they have the value `false`.
   [Read more](tools/docs/settings.md)
 
 ### yfm-transform
