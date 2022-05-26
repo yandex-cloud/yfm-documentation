@@ -1,5 +1,13 @@
 # Revision history
 
+## April 2022
+
+### yfm-docs
+
+#### 1.21.0
+
+Supported using of symlinks with a relative path
+
 ## March 2022
 
 ### yfm-docs
