@@ -4,9 +4,14 @@
 
 ### yfm-docs
 
+#### 1.22.0
+
+- Support filtering of the title and title of the meta on the leading page (index.yaml)
+- Support filtering of the title on the contents (toc.yaml)
+
 #### 1.21.0
 
-Supported using of symlinks with a relative path
+- Supported using of symlinks with a relative path
 
 ## March 2022
 
@@ -46,8 +51,8 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 * Added modes for including toc: `root_merge`, `merge`, `link`. [Read more](./project/toc.md#include-mode).
 
 * If the toc includes another one under the `root_merge` and `merge` modes, the original path will be added
-to the `sourcePath` meta field.
-* 
+  to the `sourcePath` meta field.
+*
 ### yfm-transform
 
 #### 2.4.0
@@ -65,9 +70,9 @@ to the `sourcePath` meta field.
 #### 1.15.0
 
 * Added the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
-  
+
   [Read more](./project/toc.md#include-as-pages)
-  
+
 #### 1.14.0
 
 * Added the ability to [configure the linter](./project/lint.md)
