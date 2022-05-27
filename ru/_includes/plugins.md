@@ -4,6 +4,7 @@
 | **Code**         | Отображение кнопки копирования в [блоках кода](../syntax/code.md#block)         | - | + |
 | **Cut**          | Поддержка разметки [катов](../syntax/cuts-tabs.md#cuts)                         | - | + |
 | **Deflist**      | Поддержка разметки [списка определений](../syntax/lists.md#terms)               | - | + |
+| **Tasks list**     | Добавление [списка задач](../syntax/additional.md#tasks-list)                       | `divClass`: classname для div который оборачивает чекбокс</br>(Тип: string, По умолчанию: checkbox)</br></br> `idPrefix`: перфикс для id чекбокса</br>(Тип: string, По умолчанию: checkbox) | - |
 | **Images**       | Добавление [изображений](../syntax/media.md#images)                             | `assetsPublicPath`: путь до иконок</br>(Тип: string, По умолчанию: /) | - |
 | **Imsize**       | Задание размера изображений                                                     | - | - |
 | **Includes**     | Переиспользование контента в документе                                          | `getVarsPerFile`: функция, которая по пути к файлу возвращает вычисленные переменные</br>(Тип: function, По умолчанию: -) | - |

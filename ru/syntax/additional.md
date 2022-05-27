@@ -49,7 +49,10 @@ Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 
 ## Списки задач {#tasks-list}
 
-**Плагин:** [markdown-it-checkbox](https://www.npmjs.com/package/markdown-it-checkbox)
+Импортируйте плагин из пакета следующий образом:
+```
+const checkbox = require('@doc-tools/transform/lib/plugins/checkbox');
+```
 
 Список задач представляет из себя список чекбоксов. Обычному элементу соответствует символ `- [ ]` , отмеченному — `- [x]`.
 
