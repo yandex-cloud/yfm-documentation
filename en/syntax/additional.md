@@ -49,7 +49,10 @@ You can vote to include footnote support in YFM by default in [GitHub issues](ht
 
 ## Task lists {#tasks-list}
 
-**Plugin:** [markdown-it-checkbox](https://www.npmjs.com/package/markdown-it-checkbox)
+Import plugin from package like so:
+```
+const checkbox = require('@doc-tools/transform/lib/plugins/checkbox');
+```
 
 The task list is a list of checkboxes. A normal item is represented by the `- [ ]` symbol, a checked one by `- [x]`.
 

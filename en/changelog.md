@@ -1,5 +1,13 @@
 # Revision history
 
+## May 2022
+
+### yfm-transform
+
+#### 2.6.0
+
+- Added plugin for [task lists syntax](./syntax/additional.md#tasks-list)
+
 ## April 2022
 
 ### yfm-docs

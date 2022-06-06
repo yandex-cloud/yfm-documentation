@@ -4,6 +4,7 @@
 | **code**     | Display the copy button in [code blocks](../syntax/code.md#block) | - | + |
 | **Cut**      | Support for the [cut](../syntax/cuts-tabs.md#cuts) markup | - | + |
 | **Deflist**  | Support for the [definition list](../syntax/lists.md#terms) markup | - | + |
+| **Tasks list**     | Support for the [tasks list](../syntax/additional.md#tasks-list)              | `divClass`: classname for div wrapping the checkbox</br>(type: string, default value: checkbox)</br></br> `idPrefix`: prefix for checkbox id</br>(type: string, default value: checkbox) | - |
 | **Images**   | Add [images](../syntax/media.md#images) | `assetsPublicPath`: Path to icons</br>(type: string, default value: /) | - |
 | **Imsize**   | Set the image size | - | - |
 | **Includes** | Reuse content in a document | `getVarsPerFile`: A function that returns calculated variables using the path to the file</br>(type: function, default value: -) | - |
