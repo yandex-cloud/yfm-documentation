@@ -1,6 +1,6 @@
 # Single-page build
 
-You can build an entire project as a single HTML file. To do this, when executing the `yfm` command, specify the `--singlePage` startup key.
+You can build an entire project as a single HTML file. To do this, when executing the `yfm` command, specify the `--single-page` startup key.
 
 {% note warning "Beta function" %}
 
