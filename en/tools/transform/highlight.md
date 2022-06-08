@@ -8,6 +8,45 @@ To install the package, run this command:
 npm i highlight.js
 ```
 
+## Supported Languages
+
+Key used to enable syntax highlighting inside the code block.
+
+* apache
+* bash
+* coffeescript
+* cpp
+* cs
+* css
+* diff
+* go
+* http
+* ini
+* java
+* javascript
+* json
+* kotlin
+* less
+* lua
+* makefile
+* xml
+* markdown
+* nginx
+* objectivec
+* perl
+* php
+* plaintext
+* properties
+* python
+* ruby
+* rust
+* scss
+* shell
+* sql
+* swift
+* typescript
+* yaml
+
 ## Adding other languages {#add}
 
 You can pass an additional set of languages that will be registered for use.
@@ -25,4 +64,3 @@ const highlightLangs = { 'custom-lang': customLang };
 
 const {result: {html, meta}, logs} = transform(content, {highlightLangs});
 ```
-

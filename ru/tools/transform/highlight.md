@@ -7,9 +7,48 @@
 npm i highlight.js
 ```
 
+## Поддерживаемые языки
+
+Ключ который нужно использовать внутри код блока для включения подсветки.
+
+* apache
+* bash
+* coffeescript
+* cpp
+* cs
+* css
+* diff
+* go
+* http
+* ini
+* java
+* javascript
+* json
+* kotlin
+* less
+* lua
+* makefile
+* xml
+* markdown
+* nginx
+* objectivec
+* perl
+* php
+* plaintext
+* properties
+* python
+* ruby
+* rust
+* scss
+* shell
+* sql
+* swift
+* typescript
+* yaml
+
 ## Подключить дополнительный язык {#add}
 
-Вы можете передать дополнительный набор языков, который будет зарегистрирован для использования. 
+Вы можете передать дополнительный набор языков, который будет зарегистрирован для использования.
 
 Набор языков передается в виде объекта, у которого:
 
