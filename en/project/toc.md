@@ -113,6 +113,32 @@ This field is used for a link to edit the page.
 - `link` - the project structure does not change. All links of the included table of contents are changed to links relative 
 to the table of contents in which the inclusion occurs.
 
+
+## Section expanding { #expanded }
+
+All toc sections are collapsed by default. You can change it by adding `expanded`:
+
+```yaml
+title: Yandex Cloud Marketplace
+items:
+  - name: Introduction
+    href: index.md
+  - name: Test topichead
+    expanded: true
+    items:
+      - name: Creating a virtual machine
+        href: create.md
+  - name: Initial software setup
+    href: setup.md
+  - name: Working with a virtual machine
+    href: operate.md
+  - name: API Guide
+    href: guide.md
+```
+
+Use `expanded` only for first level sections. For section levels below, `expanded` will be ignored.
+
+
 ## Hidden sections {#hidden}
 
 To make a section accessible only by a direct link and excluded it from the table of contents, specify the `hidden` parameter.
