@@ -1,5 +1,17 @@
 # Revision history
 
+## June 2022
+
+### yfm-transform
+
+#### 2.8.0
+
+- Spaces inside inline conditions are not deleted
+
+#### 2.7.0
+
+- Single-page logic has been removed from the plugins (temporarily reverted in version 2.8.2)
+
 ## May 2022
 
 ### yfm-transform
