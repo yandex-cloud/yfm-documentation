@@ -16,16 +16,16 @@ The standard `toc.yaml` file structure looks like the following:
 title: Document name
 href: index.yaml
 items:
-- name: Section name
-  href: path/to/file.md
-- name: Section group name
-      items:
-        - name: Section name
-          href: path/to/file.md
-        - name: Section name
-          href: path/to/file.md
-- name: Section name
-  href: path/to/file.md
+  - name: Section name
+    href: path/to/file.md
+  - name: Section group name
+    items:
+      - name: Section name
+        href: path/to/file.md
+      - name: Section name
+        href: path/to/file.md
+  - name: Section name
+    href: path/to/file.md
 ```
 
 * `title`: Document name. It's displayed in the table of contents above the list of all sections.
