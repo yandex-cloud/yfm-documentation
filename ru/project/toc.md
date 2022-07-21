@@ -16,16 +16,16 @@
 title: Имя документа
 href: index.yaml
 items:
-- name: Имя раздела
-  href: path/to/file.md
-- name: Имя группы разделов
-      items:
-        - name: Имя раздела
-          href: path/to/file.md
-        - name: Имя раздела
-          href: path/to/file.md
-- name: Имя раздела
-  href: path/to/file.md
+  - name: Имя раздела
+    href: path/to/file.md
+  - name: Имя группы разделов
+    items:
+      - name: Имя раздела
+        href: path/to/file.md
+      - name: Имя раздела
+        href: path/to/file.md
+  - name: Имя раздела
+    href: path/to/file.md
 ```
 
 * `title` — название документа. Отображается в оглавлении над списком всех разделов.
