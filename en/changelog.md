@@ -8,6 +8,7 @@
 
 - include/includers: allows 3rd party generated content integration into documentation.
 - include/includers/sourcedocs: allows you to integrate sourcedocs generated document into yfm documentation.
+  [Includers](./project/toc.md#includers)
 
 ## June 2022
 

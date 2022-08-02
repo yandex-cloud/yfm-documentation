@@ -8,6 +8,7 @@
 
 - include/includers: возможность интеграции сторонних форматов в документацию.
 - include/includers/sourcedocs: возможность интеграции sourcedocs документации в yfm документацию.
+  [Includers](./project/toc.md#includers)
 
 ## Июнь 2022
 

@@ -113,7 +113,7 @@ This field is used for a link to edit the page.
 - `link` - the project structure does not change. All links of the included table of contents are changed to links relative
 to the table of contents in which the inclusion occurs.
 
-### Includers
+### Includers {#includers}
 
 You are also allowed to include arbitrary content as long as there exists includer for it.
 
