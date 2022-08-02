@@ -72,12 +72,12 @@ There is also the ability to include `toc.yaml` with the addition of its element
 items:
   - name: Name1
     href: file1.md
-    
-  # Missing the name field of the element means that the elements 
-  # of the included table of contents should be added to the same level 
+
+  # Missing the name field of the element means that the elements
+  # of the included table of contents should be added to the same level
   # of the table of contents, and not as a new section.
   - include: { path: path/to/toc.yaml }
- 
+
   - name: NameX
     href: fileX.md
 ```
@@ -106,12 +106,54 @@ Possible values: `root_merge`, `merge`, `link`. Default value: `root_merge`.
 Differences:
 - `merge` and `link` - `path` is relative to the table of contents in which the inclusion occurs.
 - `root_merge` - `path` is relative to the root of the documentation.
-- `root_merge` and `merge` - all files and directories located next to the included table of contents 
+- `root_merge` and `merge` - all files and directories located next to the included table of contents
 are moved to the directory of the table of contents in which the inclusion occurs. Moving occurs with overwriting of files.
 Since the project structure changes during moving, a `sourcePath` with the path to the source file is added to the metadata of the files.
 This field is used for a link to edit the page.
-- `link` - the project structure does not change. All links of the included table of contents are changed to links relative 
+- `link` - the project structure does not change. All links of the included table of contents are changed to links relative
 to the table of contents in which the inclusion occurs.
+
+### Includers
+
+You are also allowed to include arbitrary content as long as there exists includer for it.
+
+#### List of implemented includers
+
+- [SourceDocs](https://github.com/SourceDocs/SourceDocs)
+
+#### Usage example
+
+Let's say we have documentation project inside `doc_root` folder.
+
+We can put output of the [SourceDocs](https://github.com/SourceDocs/SourceDocs) into `doc_root/doc` folder.
+
+Then include that content inside `doc_root/toc.yaml` specifying `includer` name and link to the generated leading page inside `doc_root/index.yaml`
+
+```
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: docs
+    include:
+      path: docs
+      includer: sourcedocs
+      mode: link
+```
+
+**important**:
+
+- `includer` field should be name of the implemented includer.
+- `mode` field should be **link or omitted**(link mode used by default with includers).
+- `path` field should be path to the content you are including.
+
+```
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: docs
+    href: docs/
+```
 
 
 ## Section expanding { #expanded }
@@ -150,4 +192,3 @@ To make a section accessible only by a direct link and excluded it from the tabl
 ```
 
 To completely exclude hidden sections from the build, use the [build key](../tools/docs/settings.md) `--remove-hidden-toc-items=true`.
-

@@ -1,5 +1,14 @@
 # Revision history
 
+## July 2022
+
+### yfm-docs
+
+#### 1.23.0
+
+- include/includers: allows 3rd party generated content integration into documentation.
+- include/includers/sourcedocs: allows you to integrate sourcedocs generated document into yfm documentation.
+
 ## June 2022
 
 ### yfm-transform
@@ -257,4 +266,3 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 #### 1.1.0
 
 * Added silent mode without outputting build logs.
-
