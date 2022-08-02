@@ -141,11 +141,15 @@ items:
       mode: link
 ```
 
-**important**:
+{% note warning %}
 
-- `includer` field should be name of the implemented includer.
-- `mode` field should be **link or omitted**(link mode used by default with includers).
-- `path` field should be path to the content you are including.
+`includer` field should be name of the implemented includer.
+
+`mode` field should be **link or omitted**(link mode used by default with includers).
+
+`path` field should be path to the content you are including.
+
+{% endnote %}
 
 ```
 # doc_root/index.yaml
