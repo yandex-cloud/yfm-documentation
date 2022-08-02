@@ -1,5 +1,15 @@
 # История изменений
 
+## Июль 2022
+
+### yfm-docs
+
+#### 1.23.0
+
+- include/includers: возможность интеграции сторонних форматов в документацию.
+- include/includers/sourcedocs: возможность интеграции sourcedocs документации в yfm документацию.
+  [Includers](./project/toc.md#includers)
+
 ## Июнь 2022
 
 ### yfm-transform
@@ -70,7 +80,7 @@
 
 * Добавлены режимы включения оглавления: `root_merge`, `merge`, `link`. [Подробнее](./project/toc.md#include-mode)
 
-* При включении оглавления в режимах `root_merge` и `merge`, будет добавлен оригинальный путь до исходников 
+* При включении оглавления в режимах `root_merge` и `merge`, будет добавлен оригинальный путь до исходников
 в `sourcePath` поле мета информации
 
 ### yfm-transform
@@ -89,10 +99,10 @@
 
 #### 1.15.0
 
-* Добавлена возможность включать `toc.yaml` с добавлением его элементов на тот же уровень оглавления. 
+* Добавлена возможность включать `toc.yaml` с добавлением его элементов на тот же уровень оглавления.
 
   [Подробнее](./project/toc.md#include-as-pages)
-  
+
 #### 1.14.0
 
 * Добавлена возможность [настраивать линтер](./project/lint.md)
@@ -102,7 +112,7 @@
 #### 2.2.0
 
 * Добавлена возможность переопределить разделители в плагине [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs).
- 
+
 ## Октябрь 2021
 
 ### yfm-transform
@@ -125,7 +135,7 @@
 
 * YFM можно использовать на клиенте.
 * Изменена схема подключения плагинов.
-* Плагин [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs) всегда подключен. 
+* Плагин [markdown-it-attrs](https://www.npmjs.com/package/markdown-it-attrs) всегда подключен.
 * Пакет [highlight.js](https://www.npmjs.com/package/highlight.js) необходимо устанавливать самостоятельно.
 
 ## Июль 2021
