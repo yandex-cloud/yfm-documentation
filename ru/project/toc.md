@@ -16,16 +16,16 @@
 title: Имя документа
 href: index.yaml
 items:
-- name: Имя раздела
-  href: path/to/file.md
-- name: Имя группы разделов
-      items:
-        - name: Имя раздела
-          href: path/to/file.md
-        - name: Имя раздела
-          href: path/to/file.md
-- name: Имя раздела
-  href: path/to/file.md
+  - name: Имя раздела
+    href: path/to/file.md
+  - name: Имя группы разделов
+    items:
+      - name: Имя раздела
+        href: path/to/file.md
+      - name: Имя раздела
+        href: path/to/file.md
+  - name: Имя раздела
+    href: path/to/file.md
 ```
 
 * `title` — название документа. Отображается в оглавлении над списком всех разделов.
@@ -69,7 +69,7 @@ items:
 
 ### Пример с включением оглавления без создания раздела {#include-as-pages}
 
-Также есть возможность включать `toc.yaml` с добавлением его элементов на тот же уровень оглавления. 
+Также есть возможность включать `toc.yaml` с добавлением его элементов на тот же уровень оглавления.
 
 `toc.yaml`:
 
@@ -77,11 +77,11 @@ items:
 items:
   - name: Name1
     href: file1.md
-    
+
   # Отсутствие поля name у элемента означает, что элементы включаемого оглавления стоит
   # добавлять на тот же уровень оглавления, а не как новый раздел
   - include: { path: path/to/toc.yaml }
- 
+
   - name: NameX
     href: fileX.md
 ```
@@ -99,7 +99,7 @@ items:
 - NameA
 - NameB
 - NameX
- 
+
 
 ### mode {#include-mode}
 
@@ -114,6 +114,52 @@ items:
 ```yaml
 items:
   - include: { mode: merge, path: ../relative/path/to/toc.yaml }
+```
+
+### Includers {#includers}
+
+Доступно включение произвольного контента, но только в случае если includer для этого вида контента имплементирован.
+
+#### Список имплементированных includer'ов
+
+- [SourceDocs](https://github.com/SourceDocs/SourceDocs)
+
+#### Пример использования
+
+У нас есть проект документации в папке `doc_root`.
+
+Мы можем положить результаты исполнения [SourceDocs](https://github.com/SourceDocs/SourceDocs) в папку `doc_root/doc`.
+
+Чтобы потом включить их в документацию внутри `doc_root/toc.yaml`, указав `includer` и поставить ссылку на сгенерированную разводящую в основной `doc_root/index.yaml`.
+
+```
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: docs
+    include:
+      path: docs
+      includer: sourcedocs
+      mode: link
+```
+
+{% note warning %}
+
+значение поля `includer` должно быть названием имплементированного includer'а.
+
+значение поля `mode` должно быть **link или пропущенно**(link является дефолтным поведением).
+
+значение поля `path` должно быть путем до включаемого контента.
+
+{% endnote %}
+
+```
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: docs
+    href: docs/
 ```
 
 ## Настройка раскрытия разделов { #expanded }
