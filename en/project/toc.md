@@ -1,6 +1,6 @@
 # Table of contents
 
-The document structure is described in a file named `toc.yaml`. This file defines how a table of contents is generated and documentation is built.
+The document structure is described in the file `toc.yaml`. It defines how a table of contents is generated and documentation is built.
 
 {% note warning %}
 
@@ -13,7 +13,7 @@ Files that are not specified in `toc.yaml` are not processed during the build.
 The standard `toc.yaml` file structure looks like the following:
 
 ```yaml
-title: Document name
+title: Document title
 href: index.yaml
 items:
   - name: Section name
@@ -30,41 +30,46 @@ items:
 
 * `title`: Document name. It's displayed in the table of contents above the list of all sections.
 * `name`: The name of a section or group of sections.
-* `href`: The relative path to the file.
+* `href`: A relative path to the file.
 * `items`: A grouping element.
 
 ## Section visibility conditions {#when}
 
 Individual sections can be included in or excluded from the document, depending on the values of [variables](../syntax/vars.md). To describe visibility conditions, the `when` parameter is used.
 
-Possible comparison operators: `==`, `!=`, `<`, `>`, `<=`, and `>=`.
+Possible comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`.
 
 ```yaml
-- name: Section with conditional inclusion
+- name: Section with conditional entry
   href: path/to/conditional/file.md
   when: version == 12
 ```
 
 ## Inserting tables of contents {#includes}
 
-You can include the table of contents of another document (a different `toc.yaml` file) as a subsection in your document. To do this, use the parameters:
+You can split a table of contents into different files and insert one table of contents into another. Use cases:
+* You have table of contents blocks in several documents.
+* You have a large document, which is easier to build from smaller blocks.
 
-* `include`: An element that allows you to include a different table of contents. Must contain the `path` child element.
-* `path`: The path to the table of contents to be included.
-
-Inserting tables of contents allows you to independently maintain separate sections and build a document from large blocks.
-
-### Example with inclusion of the table of contents as a section {#include-as-section}
+### Example of including a table of contents as a section {#include-as-section}
 
 ```yaml
-- name: Name of an imported block
+- name: Imported block name
   include:
     path: another/toc.yaml
 ```
 
-### Example with inclusion of a table of contents without creating a section {#include-as-pages}
+By default, `path` specifies the path from the documentation root. The name of the imported file doesn't have to be `toc.yaml`:
 
-There is also the ability to include `toc.yaml` with the addition of its elements to the same table of contents level.
+```yaml
+- name: Instructions for Android
+  include:
+    path: another/toc_android.yaml
+```
+
+### Example of including a table of contents without creating a section {#include-as-pages}
+
+You can also include `toc.yaml` with its elements in the same level of the table of contents.
 
 `toc.yaml`:
 
@@ -73,9 +78,8 @@ items:
   - name: Name1
     href: file1.md
 
-  # Missing the name field of the element means that the elements
-  # of the included table of contents should be added to the same level
-  # of the table of contents, and not as a new section.
+  # If an element doesn't have a name field, it means that elements of the included table of contents must be
+  # added to the same table of contents level, not as a new section
   - include: { path: path/to/toc.yaml }
 
   - name: NameX
@@ -90,32 +94,33 @@ items:
   - name: NameB
     href: fileB.md
 ```
-The result is in the table of contents:
+Result in the table of contents:
 - Name1
 - NameA
 - NameB
 - NameX
 
+
 ### mode {#include-mode}
 
-`include` may contain the `mode` child element.
-`mode` - the mode of inclusion of the table of contents.
+Different modes that can be set in the `mode` property:
 
-Possible values: `root_merge`, `merge`, `link`. Default value: `root_merge`.
+* `root_merge`: Enabled by default. This copies the table of contents along with all of the files and directories it uses. Let's say that you're importing the contents from folder A into the contents in folder B. All of the files from folder A will be copied to folder B during the build. Note that copying overwrites files.
 
-Differences:
-- `merge` and `link` - `path` is relative to the table of contents in which the inclusion occurs.
-- `root_merge` - `path` is relative to the root of the documentation.
-- `root_merge` and `merge` - all files and directories located next to the included table of contents
-are moved to the directory of the table of contents in which the inclusion occurs. Moving occurs with overwriting of files.
-Since the project structure changes during moving, a `sourcePath` with the path to the source file is added to the metadata of the files.
-This field is used for a link to edit the page.
-- `link` - the project structure does not change. All links of the included table of contents are changed to links relative
-to the table of contents in which the inclusion occurs.
+   The copying process changes the project structure, and `sourcePath` is added to the new files' metadata with the path to the source file. This field is used for the link to edit the page.
+* `merge`: Similar to `root_merge`, but the path to the table of contents file is specified relative to the current file where you are using `include`.
+* `link`: The project structure doesn't change. All of the included table of contents' links are changed to links relative to the table of contents where it's included.
+
+For example, let's say you want to specify a relative path in `path` to the table of contents you are importing. Do it like this:
+
+```yaml
+items:
+  - include: { mode: merge, path: ../relative/path/to/toc.yaml }
+```
 
 ### Includers {#includers}
 
-You are also allowed to include arbitrary content as long as there exists includer for it.
+You can include any content, but only if the includer for this type of content is implemented.
 
 #### List of implemented includers
 
@@ -123,11 +128,11 @@ You are also allowed to include arbitrary content as long as there exists includ
 
 #### Usage example
 
-Let's say we have documentation project inside `doc_root` folder.
+Let's say we have a documentation project in the `doc_root` folder.
 
-We can put output of the [SourceDocs](https://github.com/SourceDocs/SourceDocs) into `doc_root/doc` folder.
+We can put the [SourceDocs](https://github.com/SourceDocs/SourceDocs) results into the `doc_root/doc` folder.
 
-Then include that content inside `doc_root/toc.yaml` specifying `includer` name and link to the generated leading page inside `doc_root/index.yaml`
+To include them in the documentation inside `doc_root/toc.yaml`, add `includer` and the link to the generated section page to the main `doc_root/index.yaml`.
 
 ```
 # doc_root/toc.yaml
@@ -143,11 +148,11 @@ items:
 
 {% note warning %}
 
-`includer` field should be name of the implemented includer.
+`includer` must be the name of the implemented includer.
 
-`mode` field should be **link or omitted**(link mode used by default with includers).
+`mode` must be **link or omitted**(link is the default).
 
-`path` field should be path to the content you are including.
+`path` must be the path to the included content.
 
 {% endnote %}
 
@@ -159,35 +164,35 @@ links:
     href: docs/
 ```
 
+## Section expansion { #expanded }
 
-## Section expanding { #expanded }
-
-All toc sections are collapsed by default. You can change it by adding `expanded`:
+By default, all table of contents sections are hidden. You can change it by adding `expanded`:
 
 ```yaml
 title: Yandex Cloud Marketplace
 items:
-  - name: Introduction
+  - name: Getting started
     href: index.md
   - name: Test topichead
     expanded: true
     items:
       - name: Creating a virtual machine
         href: create.md
-  - name: Initial software setup
+  - name: Initial software configuration
     href: setup.md
-  - name: Working with a virtual machine
+  - name: Operating a virtual machine
     href: operate.md
-  - name: API Guide
+  - name: API reference
     href: guide.md
 ```
 
-Use `expanded` only for first level sections. For section levels below, `expanded` will be ignored.
+You can only use `expanded` for first-level sections. In lower sections, `expanded` will be ignored.
+Use it to make important sections and pages in the table of contents always visible.
 
 
 ## Hidden sections {#hidden}
 
-To make a section accessible only by a direct link and excluded it from the table of contents, specify the `hidden` parameter.
+To make a section accessible only by direct link and excluded it from the table of contents, add the `hidden` parameter.
 
 ```yaml
 - title: Secret document
