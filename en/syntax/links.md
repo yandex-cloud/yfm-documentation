@@ -24,6 +24,27 @@ You can create a link to an MD file without explicitly specifying the link text.
 
 [{#T}](./index.md)
 
+
+## Link to MD file section {#auto-section-title}
+
+You can refere:
+
+* To the section of the current page.
+
+  `[text](#anchor)`
+
+  **Result**
+
+  [{#T}](#formatting)
+
+* To a section of another page.
+
+  `[text](base.md#anchor)`
+
+  **Result**
+
+  [{#T}](base.md#headers)
+
 ## A URL or an email address {#url-email}
 
 To convert a URL or an email address to a link, add angle brackets `<>` on both sides.
