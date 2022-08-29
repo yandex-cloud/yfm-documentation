@@ -42,6 +42,10 @@
 
 ### yfm-transform
 
+#### 2.9.0
+
+- Added plugin for [file links](./syntax/links.md#files)
+
 #### 2.8.0
 
 - Spaces inside inline conditions are not deleted.
