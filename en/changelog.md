@@ -20,6 +20,14 @@
 
 - Functionality to [set image size](./syntax/media.md) enabled by default.
 
+## August 2022
+
+### yfm-transform
+
+#### 2.11.0
+
+ - Support for inline formatting in the title of cuts and notes.
+
 ## July 2022
 
 ### yfm-docs
