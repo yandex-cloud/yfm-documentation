@@ -120,19 +120,36 @@ items:
 
 ### Includers {#includers}
 
-You can include any content, but only if the includer for this type of content is implemented.
+You can include any content, as long as the includer for this type of content is implemented
+
+{% note warning %}
+
+`includer` must be the name of the implemented includer.
+
+`mode` must be **link or omitted**(link is the default).
+
+`path` must be the path to the included content.
+
+{% endnote %}
 
 #### List of implemented includers
 
-- [SourceDocs](https://github.com/SourceDocs/SourceDocs)
+- [Source Docs](https://github.com/SourceDocs/SourceDocs)
+- [Open API](https://www.openapis.org/)
 
-#### Usage example
+#### Source Docs
+
+You can generate documentation with [Source Docs](https://github.com/SourceDocs/SourceDocs) and include it into your main document.
+
+##### Usage example
 
 Let's say we have a documentation project in the `doc_root` folder.
 
-We can put the [SourceDocs](https://github.com/SourceDocs/SourceDocs) results into the `doc_root/doc` folder.
+Put the output of the Source Docs into the `doc_root/doc` folder.
 
-To include them in the documentation inside `doc_root/toc.yaml`, add `includer` and the link to the generated section page to the main `doc_root/index.yaml`.
+Then you need to include it inside `doc_root/toc.yaml` with sourcedocs `includer`.
+
+Link to the generated leading page inside main `doc_root/index.yaml`.
 
 ```
 # doc_root/toc.yaml
@@ -146,22 +163,46 @@ items:
       mode: link
 ```
 
-{% note warning %}
-
-`includer` must be the name of the implemented includer.
-
-`mode` must be **link or omitted**(link is the default).
-
-`path` must be the path to the included content.
-
-{% endnote %}
-
 ```
 # doc_root/index.yaml
 title: documentation
 links:
   - title: docs
     href: docs/
+```
+
+#### Open API
+
+You can generate documentation from the [Open API](https://www.openapis.org/) specification file and include it into your main document.
+
+##### Usage example
+
+Let's say we have a documentation project in the `doc_root` folder.
+
+Put specification file into it at `doc_root/openapi.yaml`.
+
+Then you need to include it inside `doc_root/toc.yaml` with the openapi `includer`
+
+Link to the generated leading page inside main `doc_root/index.yaml`
+
+```
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: docs
+    include:
+      path: openapi.yaml
+      includer: openapi
+      mode: link
+```
+
+```
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: openapi
+    href: openapi/
 ```
 
 ## Section expansion { #expanded }
