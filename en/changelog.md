@@ -1,5 +1,14 @@
 # Revision history
 
+## September 2022
+
+### yfm-docs
+
+#### 1.24.0
+
+- includers/openapi: allows autogeneration from openapi specification and inclusion into the main document
+  [Open API](./project/toc.md#open-api)
+
 ## July 2022
 
 ### yfm-docs
