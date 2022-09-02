@@ -1,5 +1,14 @@
 # История изменений
 
+## September 2022
+
+### yfm-docs
+
+#### 1.24.0
+
+- includers/openapi: возможность **автогенерации** документации из **Open API** спецификации и её включение в основную
+  [Open API](./project/toc.md#open-api)
+
 ## Июль 2022
 
 ### yfm-docs
