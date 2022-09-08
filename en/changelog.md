@@ -9,6 +9,12 @@
 - includers/openapi: allows autogeneration from openapi specification and inclusion into the main document
   [Open API](./project/toc.md#open-api)
 
+### yfm-transform
+
+#### 2.12.0
+
+- Functionality to [set image size](./syntax/media.md) enabled by default.
+
 ## July 2022
 
 ### yfm-docs
