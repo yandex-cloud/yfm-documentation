@@ -45,7 +45,7 @@ Possible comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`.
   when: version == 12
 ```
 
-## Substitutions and conditional operators
+## Substitutions and conditional operators {#subtitudes}
 
 Document title supports [substitutions](../syntax/vars#subtitudes) and [conditional operators](../syntax/vars#conditions).
 

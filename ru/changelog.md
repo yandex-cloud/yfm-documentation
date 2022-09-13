@@ -6,8 +6,8 @@
 
 #### 1.26.0
 
-- services/leading: добавлена поддержка замен и условий в title, description, meta.title, nav.title, links[].title, links[].description
-- services/tocs: добавлена поддержка замен и условий в title
+- services/leading: добавлена поддержка [подстановок и условных операторов](./project/leading-page.md#subtitudes) в названии и описании документа
+- services/tocs: добавлена поддержка [подстановок и условных операторов](./project/toc.md#subtitudes) в названии документа
 
 #### 1.24.0
 

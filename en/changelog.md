@@ -6,8 +6,8 @@
 
 #### 1.26.0
 
-- services/leading: add substitutions and conditions support in title, description, meta.title, nav.title, links[].title, links[].description
-- services/tocs: add substitutions and conditions support in title
+- services/leading: add [substitutions and conditional operators support](./project/leading-page.md#subtitudes) in document title and description
+- services/tocs: add [substitutions and conditional operators support](./project/toc.md#subtitudes) in document title
 
 #### 1.24.0
 
