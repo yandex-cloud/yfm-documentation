@@ -46,3 +46,17 @@ Possible comparison operators: `==`, `!=`, `<`, `>`, `<=`, and `>=`.
   when: version == 12
 ```
 
+## Substitutions and conditional operators
+
+Title and description sections and links supports [substitutions](../syntax/vars#subtitudes) and [conditional operators](../syntax/vars#conditions).
+
+```yaml
+title: "{{ title }}"
+description: "{% version == 10 %}{{ description_legacy }}{% else %}{{ description }}"
+meta:
+  title: "{{ meta_title }}"
+links:
+- title: "{{ link_title }}"
+  description: "{{ link_description }}"
+  href: path/to/conditional/file.md
+```
