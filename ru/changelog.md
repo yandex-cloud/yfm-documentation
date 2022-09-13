@@ -4,6 +4,11 @@
 
 ### yfm-docs
 
+#### 1.26.0
+
+- services/leading: добавлена поддержка замен и условий в title, description, meta.title, nav.title, links[].title, links[].description
+- services/tocs: добавлена поддержка замен и условий в title
+
 #### 1.24.0
 
 - includers/openapi: возможность **автогенерации** документации из **Open API** спецификации и её включение в основную

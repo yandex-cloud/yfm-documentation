@@ -4,6 +4,11 @@
 
 ### yfm-docs
 
+#### 1.26.0
+
+- services/leading: add substitutions and conditions support in title, description, meta.title, nav.title, links[].title, links[].description
+- services/tocs: add substitutions and conditions support in title
+
 #### 1.24.0
 
 - includers/openapi: allows autogeneration from openapi specification and inclusion into the main document
