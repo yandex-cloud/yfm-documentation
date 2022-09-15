@@ -45,9 +45,9 @@ items:
   when: version == 12
 ```
 
-## Постановки и условные операторы {#subtitudes}
+## Подстановки и условные операторы {#subtitudes}
 
-Название документа поддерживает [постановки](../syntax/vars#subtitudes) и [условные операторы](../syntax/vars#conditions).
+Название документа поддерживает [подстановки](../syntax/vars#subtitudes) и [условные операторы](../syntax/vars#conditions).
 
 ```yaml
 title: "{{ title }}"

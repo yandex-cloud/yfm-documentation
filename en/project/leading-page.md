@@ -48,11 +48,11 @@ Possible comparison operators: `==`, `!=`, `<`, `>`, `<=`, and `>=`.
 
 ## Substitutions and conditional operators {#subtitudes}
 
-Title and description sections and links supports [substitutions](../syntax/vars#subtitudes) and [conditional operators](../syntax/vars#conditions).
+Title and description of document and links support [substitutions](../syntax/vars#subtitudes) and [conditional operators](../syntax/vars#conditions).
 
 ```yaml
 title: "{{ title }}"
-description: "{% version == 10 %}{{ description_legacy }}{% else %}{{ description }}"
+description: "{% if version == 10 %}{{ description_legacy }}{% else %}{{ description }}{% endif %}"
 meta:
   title: "{{ meta_title }}"
 links:

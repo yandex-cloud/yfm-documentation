@@ -45,13 +45,13 @@ links:
   when: version == 12
 ```
 
-## Постановки и условные операторы {#subtitudes}
+## Подстановки и условные операторы {#subtitudes}
 
-Название и описание разделов и ссылок поддерживают [постановки](../syntax/vars#subtitudes) и [условные операторы](../syntax/vars#conditions).
+Название и описание документа и ссылок поддерживают [подстановки](../syntax/vars#subtitudes) и [условные операторы](../syntax/vars#conditions).
 
 ```yaml
 title: "{{ title }}"
-description: "{% version == 10 %}{{ description_legacy }}{% else %}{{ description }}"
+description: "{% if version == 10 %}{{ description_legacy }}{% else %}{{ description }}{% endif %}"
 meta:
   title: "{{ meta_title }}"
 links:

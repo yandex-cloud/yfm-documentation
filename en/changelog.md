@@ -6,7 +6,7 @@
 
 #### 1.26.0
 
-- services/leading: add [substitutions and conditional operators support](./project/leading-page.md#subtitudes) in document title and description
+- services/leading: add [substitutions and conditional operators support](./project/leading-page.md#subtitudes) on leading page for title and description
 - services/tocs: add [substitutions and conditional operators support](./project/toc.md#subtitudes) in document title
 
 #### 1.24.0
