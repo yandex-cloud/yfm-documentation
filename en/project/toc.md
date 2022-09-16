@@ -45,6 +45,14 @@ Possible comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`.
   when: version == 12
 ```
 
+## Substitutions and conditional operators {#subtitudes}
+
+Document title supports [substitutions](../syntax/vars#subtitudes) and [conditional operators](../syntax/vars#conditions).
+
+```yaml
+title: "{{ title }}"
+```
+
 ## Inserting tables of contents {#includes}
 
 You can split a table of contents into different files and insert one table of contents into another. Use cases:

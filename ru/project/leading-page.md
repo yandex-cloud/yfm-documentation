@@ -44,3 +44,18 @@ links:
   href: path/to/conditional/file.md
   when: version == 12
 ```
+
+## Подстановки и условные операторы {#subtitudes}
+
+Название и описание документа и ссылок поддерживают [подстановки](../syntax/vars#subtitudes) и [условные операторы](../syntax/vars#conditions).
+
+```yaml
+title: "{{ title }}"
+description: "{% if version == 10 %}{{ description_legacy }}{% else %}{{ description }}{% endif %}"
+meta:
+  title: "{{ meta_title }}"
+links:
+- title: "{{ link_title }}"
+  description: "{{ link_description }}"
+  href: path/to/conditional/file.md
+```
