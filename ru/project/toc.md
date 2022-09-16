@@ -159,7 +159,7 @@ items:
 
 Поставим ссылку на сгенерированную разводящую в основной в `doc_root/index.yaml`.
 
-```
+```yaml
 # doc_root/toc.yaml
 title: documentation
 href: index.yaml
@@ -171,7 +171,7 @@ items:
       mode: link
 ```
 
-```
+```yaml
 # doc_root/index.yaml
 title: documentation
 links:
@@ -193,7 +193,7 @@ links:
 
 Поставим ссылку на сгенерированную разводящую в основной в `doc_root/index.yaml`.
 
-```
+```yaml
 # doc_root/toc.yaml
 title: documentation
 href: index.yaml
@@ -205,7 +205,7 @@ items:
       mode: link
 ```
 
-```
+```yaml
 # doc_root/index.yaml
 title: documentation
 links:

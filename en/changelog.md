@@ -6,12 +6,12 @@
 
 #### 1.26.0
 
-- services/leading: add [substitutions and conditional operators support](./project/leading-page.md#subtitudes) on leading page for title and description
-- services/tocs: add [substitutions and conditional operators support](./project/toc.md#subtitudes) in document title
+- services/leading: add [substitutions and conditional operators support](./project/leading-page.md#subtitudes) on leading page for title and description.
+- services/tocs: add [substitutions and conditional operators support](./project/toc.md#subtitudes) in document title.
 
 #### 1.24.0
 
-- includers/openapi: allows autogeneration from openapi specification and inclusion into the main document
+- includers/openapi: allows autogeneration from openapi specification and inclusion into the main document.
   [Open API](./project/toc.md#open-api)
 
 ### yfm-transform
@@ -28,7 +28,7 @@
 
 - include/includers: allows 3rd party generated content integration into documentation.
 - include/includers/sourcedocs: allows you to integrate sourcedocs generated document into yfm documentation.
-  [Includers](./project/toc.md#includers)
+  [Includers](./project/toc.md#includers).
 
 ## June 2022
 
@@ -36,11 +36,11 @@
 
 #### 2.8.0
 
-- Spaces inside inline conditions are not deleted
+- Spaces inside inline conditions are not deleted.
 
 #### 2.7.0
 
-- Single-page logic has been removed from the plugins (temporarily reverted in version 2.8.2)
+- Single-page logic has been removed from the plugins (temporarily reverted in version 2.8.2).
 
 ## May 2022
 
@@ -48,7 +48,7 @@
 
 #### 2.6.0
 
-- Added plugin for [task lists syntax](./syntax/additional.md#tasks-list)
+- Added plugin for [task lists syntax](./syntax/additional.md#tasks-list).
 
 ## April 2022
 
@@ -56,12 +56,12 @@
 
 #### 1.22.0
 
-- Support filtering of the title and title of the meta on the leading page (index.yaml)
-- Support filtering of the title on the contents (toc.yaml)
+- Support filtering of the title and title of the meta on the leading page (index.yaml).
+- Support filtering of the title on the contents (toc.yaml).
 
 #### 1.21.0
 
-- Supported using of symlinks with a relative path
+- Supported using of symlinks with a relative path.
 
 ## March 2022
 
@@ -69,7 +69,7 @@
 
 #### 1.20.0
 
-- Supported filtering of the description on the leading page (index.yaml)
+- Supported filtering of the description on the leading page (index.yaml).
 
 #### 1.19.0
 
@@ -81,7 +81,7 @@
 
 #### 2.5.0
 
-- Rewritten in Typescript
+- Rewritten in Typescript.
 
 ## December 2021
 
@@ -102,7 +102,7 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 
 * If the toc includes another one under the `root_merge` and `merge` modes, the original path will be added
   to the `sourcePath` meta field.
-*
+
 ### yfm-transform
 
 #### 2.4.0
@@ -125,7 +125,7 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 
 #### 1.14.0
 
-* Added the ability to [configure the linter](./project/lint.md)
+* Added the ability to [configure the linter](./project/lint.md).
 
 ### yfm-transform
 
@@ -147,7 +147,7 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 
 #### 1.13.0
 
-* YFM2 is used
+* YFM2 is used.
 
 ### yfm-transform
 
@@ -192,7 +192,7 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 
 #### 1.8.0
 
-* Added experimental linter support
+* Added experimental linter support.
 
 ## April 2021
 
@@ -226,7 +226,7 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 
 #### 1.5.0
 
-* Refactoring and bug fixes
+* Refactoring and bug fixes.
 
 #### 1.4.0
 
@@ -236,7 +236,7 @@ Update YFM to v2.4. Added support [monospaced text](./syntax/base.md) and [multi
 
 #### 1.6.0
 
-* Added support for loops, filters, and functions
+* Added support for loops, filters, and functions.
 
 #### 1.5.0
 
