@@ -16,6 +16,10 @@
 
 ### yfm-transform
 
+#### 2.14.0
+
+- Added sanitizing of generated HTML. Disabled by default. Parameter to enable: `needToSanitizeHtml: true`. You can override the default settings via the `sanitizeOptions` parameter.
+
 #### 2.12.0
 
 - Functionality to [set image size](./syntax/media.md) enabled by default.
