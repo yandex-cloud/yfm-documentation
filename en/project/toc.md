@@ -159,7 +159,7 @@ Then you need to include it inside `doc_root/toc.yaml` with sourcedocs `includer
 
 Link to the generated leading page inside main `doc_root/index.yaml`.
 
-```
+```yaml
 # doc_root/toc.yaml
 title: documentation
 href: index.yaml
@@ -171,7 +171,7 @@ items:
       mode: link
 ```
 
-```
+```yaml
 # doc_root/index.yaml
 title: documentation
 links:
@@ -193,7 +193,7 @@ Then you need to include it inside `doc_root/toc.yaml` with the openapi `include
 
 Link to the generated leading page inside main `doc_root/index.yaml`
 
-```
+```yaml
 # doc_root/toc.yaml
 title: documentation
 href: index.yaml
@@ -205,7 +205,7 @@ items:
       mode: link
 ```
 
-```
+```yaml
 # doc_root/index.yaml
 title: documentation
 links:
