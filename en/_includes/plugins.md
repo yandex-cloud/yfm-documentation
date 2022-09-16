@@ -3,7 +3,8 @@
 | **Anchors**  | Automatically generate [anchors for headers](../syntax/base.md#headers) | `extractTitle`: Consider the first level header</br>(type: bool, default value: false)</br></br>`supportGithubAnchors`: Generate additional anchors compatible with GitHub</br>(type: bool, default value: false) | + |
 | **code**     | Display the copy button in [code blocks](../syntax/code.md#block) | - | + |
 | **Cut**      | Support for the [cut](../syntax/cuts-tabs.md#cuts) markup | - | + |
-| **Deflist**  | Support for the [definition list](../syntax/lists.md#terms) markup | - | + |
+| **Deflist**   | Support for the [definition list](../syntax/lists.md#terms) markup | - | + |
+| **File**     | Support for the [file objects](../syntax/links.md#files) markup | `fileExtraAttrs`: additional attributes for the link | + |
 | **Tasks list**     | Support for the [tasks list](../syntax/additional.md#tasks-list)              | `divClass`: classname for div wrapping the checkbox</br>(type: string, default value: checkbox)</br></br> `idPrefix`: prefix for checkbox id</br>(type: string, default value: checkbox) | - |
 | **Images**   | Add [images](../syntax/media.md#images) | `assetsPublicPath`: Path to icons</br>(type: string, default value: /) | - |
 | **Imsize**   | Set the image size | - | - |

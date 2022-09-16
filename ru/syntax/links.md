@@ -99,3 +99,13 @@ I love the **[Yandex Cloud](https://cloud.yandex.com)**.
 This is the _[YFM Guide](https://yadocs.tech)_.
 See the section on [`code`](#code).
 Super [^men^](https://en.wikipedia.org/wiki/Major_Grom_(2017_film)).
+
+## Файлы {#files}
+
+Если требуется указать ссылку на файл, можно воспользоваться специальной ссылкой с иконкой файла. После клика на такую ссылку браузер начнёт скачивать указанный файл на устройство.
+
+```markdown
+{% file src="data:text/plain;base64,Cg==" name="empty.txt" %}
+```
+
+{% file src="data:text/plain;base64,Cg==" name="empty.txt" %}
