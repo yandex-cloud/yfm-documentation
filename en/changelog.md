@@ -32,6 +32,10 @@
 
  - Support for inline formatting in the title of cuts and notes.
 
+#### 2.10.0
+
+- Added the `needFlatListHeadings?: boolean;` parameter, which allows to form a flat list of all document headers in `transform().result.headings`. By default – `false`.
+
 ## July 2022
 
 ### yfm-docs
