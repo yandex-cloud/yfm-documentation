@@ -15,6 +15,5 @@
 `disableLiquid` | Отключить использование переменных | `bool` | `false`
 `supportGithubAnchors` | Генерировать дополнительные [якоря](./syntax/base.md#headers), совместимые с GitHub | `bool` | `false`
 `lang` | Язык локализации дефолтных текстов | `string` | `ru`
-`needFlatListHeadings` | Сформировать плоский список всех заголовков в документе | `bool` | `false`
 `needToSanitizeHtml` | Нужно ли санитайзить сгенерированный HTML | `bool` | `false`
 `sanitizeOptions` | Конфигурация санитайзера | `Object` | `undefined`

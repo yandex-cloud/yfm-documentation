@@ -11,4 +11,5 @@ The transformation settings are listed below. You can configure them and [standa
 | `highlightLangs` | Additional languages for [code highlighting](highlight.md) | `{'lang': function}` | `{}` |
 | `extractTitle` | Return the first first-level header as the title of the entire document | `bool` | `false` |
 | `needTitle` | Return the first first-level header without removing it from the document text | `bool` | `false` |
+|`needFlatListHeadings` | Generate a flat list of all headers in a document | `bool` | `false` |
 
