@@ -102,3 +102,12 @@ This is the _[YFM Guide](https://yadocs.tech)_.
 See the section on [`code`](#code).
 Super [^men^](https://en.wikipedia.org/wiki/Major_Grom_(2017_film)).
 
+## Files {#files}
+
+If you need to specify a link to a file, you can use a special link with a file icon. After clicking on such a link, the browser will start downloading the specified file to the device.
+
+```markdown
+{% file src="data:text/plain;base64,Cg==" name="empty.txt" %}
+```
+
+{% file src="data:text/plain;base64,Cg==" name="empty.txt" %}

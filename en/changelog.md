@@ -16,9 +16,25 @@
 
 ### yfm-transform
 
+#### 2.14.0
+
+- Added sanitizing of generated HTML. Disabled by default. Parameter to enable: `needToSanitizeHtml: true`. You can override the default settings via the `sanitizeOptions` parameter.
+
 #### 2.12.0
 
 - Functionality to [set image size](./syntax/media.md) enabled by default.
+
+## August 2022
+
+### yfm-transform
+
+#### 2.11.0
+
+ - Support for inline formatting in the title of cuts and notes.
+
+#### 2.10.0
+
+- Added the `needFlatListHeadings?: boolean;` parameter, which allows to form a flat list of all document headers in `transform().result.headings`. By default – `false`.
 
 ## July 2022
 
@@ -33,6 +49,10 @@
 ## June 2022
 
 ### yfm-transform
+
+#### 2.9.0
+
+- Added plugin for [file links](./syntax/links.md#files)
 
 #### 2.8.0
 

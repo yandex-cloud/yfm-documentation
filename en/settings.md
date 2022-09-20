@@ -9,11 +9,13 @@ Standard YFM settings are listed below. Depending on the tool you use, you can c
 | Name | Description | Type | Default value |
 | :--- | :--- | :--- | :--- |
 | `vars` | [Variables](./syntax/vars.md) | `Object` | `{}` |
-| `allowHTML` | Allow HTML | `bool` | `false` |
+| `allowHTML` | Allow HTML in markup | `bool` | `false` |
 | `linkify` | Convert link-like strings to links | `bool` | `false` |
 | `breaks` | Use the carriage return character for a line break | `bool` | `true` |
 | `conditionsInCode` | Meet conditions in code blocks | `bool` | `false` |
 | `disableLiquid` | Disable the use of variables | `bool` | `false` |
 | `supportGithubAnchors` | Generate additional [anchors](./syntax/base.md#headers) that are compatible with GitHub | `bool` | `false` |
 | `lang` | Localization language of default texts | `string` | `ru` |
+`needToSanitizeHtml` | Need to sanitize the generated HTML | `bool` | `false`
+`sanitizeOptions` | Sanitizer configuration | `Object` | `undefined`
 
