@@ -19,6 +19,8 @@ The standard markup for inserting an image is:
   * `"hint_text"`: A hint that will be displayed when you hover over the image. Optional.
   * `=100x100`: The image size. Optional.
 
+    If you want to keep the aspect ratio of your image, only specify its width: `100x`.
+
 ### Images as links {#image-link}
 
 You can make an image clickable using [link design rules](./links.md). To do this, add the standard image markup to the part where the link text usually goes.
