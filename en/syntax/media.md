@@ -19,7 +19,11 @@ The standard markup for inserting an image is:
   * `"hint_text"`: A hint that will be displayed when you hover over the image. Optional.
   * `=100x100`: The image size. Optional.
 
+    {% note tip %}
+
     If you want to keep the aspect ratio of your image, only specify its width: `100x`.
+
+    {% endnote %}
 
 ### Images as links {#image-link}
 
