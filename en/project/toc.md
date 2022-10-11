@@ -55,7 +55,7 @@ title: "{{ title }}"
 
 {% note warning %}
 
-Always use quotes if a value starts with a variable. Without quotes, the value is processed as JSON embedded in YAML, which can lead to build errors such as `TypeError: str.replace is not a function`.
+Always use quotes if a value starts with a substitution. Without quotes, the value is processed as JSON embedded in YAML, which can lead to build errors such as `TypeError: str.replace is not a function`.
 
 {% endnote %}
 
