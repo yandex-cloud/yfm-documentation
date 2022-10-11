@@ -53,6 +53,12 @@ Document title supports [substitutions](../syntax/vars#subtitudes) and [conditio
 title: "{{ title }}"
 ```
 
+{% note warning %}
+
+Always use quotes if a value starts with a variable. Without quotes, the value is processed as JSON embedded in YAML, which can lead to build errors such as `TypeError: str.replace is not a function`.
+
+{% endnote %}
+
 ## Inserting tables of contents {#includes}
 
 You can split a table of contents into different files and insert one table of contents into another. Use cases:
