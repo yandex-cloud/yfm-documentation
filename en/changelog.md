@@ -1,5 +1,13 @@
 # Revision history
 
+## November 2022
+
+### yfm-transform
+
+#### 2.15.0
+
+- Added `linkifyTlds` option that allows configure tld for the linkify plugin.
+
 ## September 2022
 
 ### yfm-docs
