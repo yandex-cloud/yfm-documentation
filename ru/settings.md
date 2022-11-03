@@ -17,3 +17,4 @@
 `lang` | Язык локализации дефолтных текстов | `string` | `ru`
 `needToSanitizeHtml` | Нужно ли санитайзить сгенерированный HTML | `bool` | `false`
 `sanitizeOptions` | Конфигурация санитайзера | `Object` | `undefined`
+`linkifyTlds` | Позволяет настраивать tld для плагина linkify | `string \| string[]` | `undefined`

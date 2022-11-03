@@ -18,4 +18,4 @@ Standard YFM settings are listed below. Depending on the tool you use, you can c
 | `lang` | Localization language of default texts | `string` | `ru` |
 `needToSanitizeHtml` | Need to sanitize the generated HTML | `bool` | `false`
 `sanitizeOptions` | Sanitizer configuration | `Object` | `undefined`
-
+`linkifyTlds` | Allow set tld for the linkify plugin | `string \| string[]` | `undefined`
