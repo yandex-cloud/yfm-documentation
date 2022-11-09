@@ -2,6 +2,12 @@
 
 ## November 2022
 
+### yfm-docs
+
+#### 1.31.0
+
+- Added support for [definitions](./syntax/term.md).
+
 ### yfm-transform
 
 #### 2.15.0
@@ -27,6 +33,10 @@
 #### 2.14.0
 
 - Added sanitizing of generated HTML. Disabled by default. Parameter to enable: `needToSanitizeHtml: true`. You can override the default settings via the `sanitizeOptions` parameter.
+
+#### 2.13.0
+
+- Added syntax for [definitions](./syntax/term.md).
 
 #### 2.12.0
 
