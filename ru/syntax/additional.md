@@ -54,10 +54,10 @@ Here's a simple footnote,[^1] and here's a longer one.[^bignote]
 const checkbox = require('@doc-tools/transform/lib/plugins/checkbox');
 ```
 
-Список задач представляет из себя список чекбоксов. Обычному элементу соответствует символ `- [ ]` , отмеченному — `- [x]`.
+Список задач представляет из себя список чекбоксов. Обычному элементу соответствует символ `- [ ]` , отмеченному — `- [x]`. В описании задачи можно использовать [строчное форматирование](./base.md#line).
 
 ```markdown
-- [x] Write the press release
+- [x] ~~Write the press release~~
 - [ ] Update the website
 - [ ] Contact the media
 ```
