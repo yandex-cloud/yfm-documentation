@@ -30,6 +30,8 @@ items:
         href: syntax/meta.md
       - name: Переменные
         href: syntax/vars.md
+      - name: Определения
+        href: syntax/term.md
       - name: Дополнительные возможности
         href: syntax/additional.md
   - name: Настройки

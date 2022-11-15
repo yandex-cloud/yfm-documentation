@@ -30,6 +30,8 @@ items:
         href: syntax/meta.md
       - name: Variables
         href: syntax/vars.md
+      - name: Definition
+        href: syntax/term.md
       - name: Additional features
         href: syntax/additional.md
   - name: Settings
