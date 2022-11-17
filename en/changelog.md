@@ -10,6 +10,10 @@
 
 ### yfm-transform
 
+#### 2.16.0
+
+- Added support for inline markup in [task lists](./syntax/additional.md#tasks-list)
+
 #### 2.15.0
 
 - Added `linkifyTlds` option that allows configure tld for the linkify plugin.

@@ -54,10 +54,10 @@ Import plugin from package like so:
 const checkbox = require('@doc-tools/transform/lib/plugins/checkbox');
 ```
 
-The task list is a list of checkboxes. A normal item is represented by the `- [ ]` symbol, a checked one by `- [x]`.
+The task list is a list of checkboxes. A normal item is represented by the `- [ ]` symbol, a checked one by `- [x]`. You can use [line formatting](./base.md#line) in the task description.
 
 ```markdown
-- [x] Write the press release
+- [x] ~~Write the press release~~
 - [ ] Update the website
 - [ ] Contact the media
 ```
