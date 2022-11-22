@@ -50,10 +50,10 @@ items:
         items:
           - name: Overview
             href: tools/docs/index.md
+          - name: Build
+            href: tools/docs/build.md
           - name: Settings
             href: tools/docs/settings.md
-          - name: Building a project in YFM
-            href: tools/docs/md2md.md
           - name: Single-page build
             href: tools/docs/singlepage.md
           - name: Uploading to S3
