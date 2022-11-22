@@ -50,10 +50,10 @@ items:
         items:
           - name: Обзор
             href: tools/docs/index.md
+          - name: Сборка
+            href: tools/docs/build.md
           - name: Настройки
             href: tools/docs/settings.md
-          - name: Сборка в YFM
-            href: tools/docs/md2md.md
           - name: Одностраничная сборка
             href: tools/docs/singlepage.md
           - name: Выкладка на S3
