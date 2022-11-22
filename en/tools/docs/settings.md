@@ -17,7 +17,7 @@ The name of the startup key corresponds to the name of the setting.
 | `--quiet, -q`               | Start in quiet mode.</br></br>Do not output logs to stdout. Disabled by default. |
 | `--config, -c`              | Path to the [configuration file](../../project/config.md). |
 | `--singlePage`              | Build the project as a single HTML file. For more information, see [Single-page build](./singlepage.md). |
-| `--output-format`           | Generation format. HTML by default, but you can choose to [build in YFM](md2md.md). |
+| `--output-format`           | Generation format. HTML by default, but you can choose to [build in YFM](build.md#yfm). |
 | `--apply-presets`           | Substitute variable values from presets when building in YFM. |
 | `--add-system-meta`         | Add variables from the system presets section to [metadata](../../syntax/meta.md#meta) files. Disabled by default. |
 | `--remove-hidden-toc-items` | Remove hidden pages from the build result. Disabled by default. |
@@ -27,4 +27,3 @@ The name of the startup key corresponds to the name of the setting.
 | `--add-map-file`            | Should add all paths of documentation into file.json. Disabled by default. |
 
 To view the full list of keys, run the `yfm --help` command.
-

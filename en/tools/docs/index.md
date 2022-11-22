@@ -12,16 +12,6 @@ To install the package, run this command:
 npm i @doc-tools/docs -g
 ```
 
-## Usage {#use}
+## Commands
 
-The package provides the `yfm` CLI command.
-
-To start rendering, run the command specifying the required [startup keys](settings.md):
-
-* `--input, -i`: The path to the project folder.
-* `--output, -o`: The path to the folder for output data (static HTMLs).
-
-```shell script
-yfm -i ./input-folder -o ./ouput-folder
-```
-
+- [Build](./build.md)
