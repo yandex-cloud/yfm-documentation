@@ -15,3 +15,4 @@ npm i @doc-tools/docs -g
 ## Commands
 
 - [Build](./build.md)
+- [Translate](./translate.md)
