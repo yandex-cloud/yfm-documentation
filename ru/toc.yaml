@@ -52,6 +52,8 @@ items:
             href: tools/docs/index.md
           - name: Сборка
             href: tools/docs/build.md
+          - name: Перевод
+            href: tools/docs/translate.md
           - name: Настройки
             href: tools/docs/settings.md
           - name: Одностраничная сборка
