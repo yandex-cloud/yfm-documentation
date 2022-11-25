@@ -15,3 +15,4 @@ npm i @doc-tools/docs -g
 ## Команды
 
 - [Сборка](./build.md)
+- [Перевод](./translate.md)
