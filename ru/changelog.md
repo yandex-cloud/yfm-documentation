@@ -1,5 +1,18 @@
 # История изменений
 
+## Декабрь 2022
+
+### yfm-docs
+
+#### 2.0.0
+
+- [Новый Интерфейс Инклюдеров](./project/toc.md#includers)
+- [Generic Инклюдер](./project/toc.md#includers-generic)
+- [Open API Инклюдер](./project/toc.md#includers-open-api)
+- [Unarchive Инклюдер](./project/toc.md#includers-unarchive)
+- [Source Docs Инклюдер](./project/toc.md#includers-source-docs)
+
+
 ## Ноябрь 2022
 
 ### yfm-docs

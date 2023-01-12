@@ -128,34 +128,214 @@ items:
 
 ### Includers {#includers}
 
-Доступно включение произвольного контента, но только в случае если includer для этого типа контента имплементирован.
+Доступно включение произвольного контента через `includers`, но только в случае если `includer` для этого типа контента имплементирован.
 
-{% note warning %}
+Возможные способы указания инклюдеров:
 
-значение поля `includer` должно быть названием имплементированного includer'а.
+- массив `includer` объектов в поле `includers`
 
-значение поля `mode` должно быть **link или пропущенно**(link является дефолтным поведением).
+- `includer` объект в `includer` поле. _в процессе деприкации в пользу `includers` поля_
 
-значение поля `path` должно быть путем до включаемого контента.
+{% note warning "требования к include" %}
+
+`include` должен иметь `path` куда контент будет включен
+
+`path` поле должно быть **путем куда будет включен контент**.
+
+`mode` должен быть **link или пропущенно, link является дефолтным поведением**
 
 {% endnote %}
 
-#### Список имплементированных includer'ов
+{% note warning "требования к includers" %}
 
-- [Source Docs](https://github.com/SourceDocs/SourceDocs)
-- [Open API](https://www.openapis.org/)
+`includers` должен быть массивом includer объектов, которые будут запущенны в указанном порядке
+
+{% endnote %}
+
+{% note warning "требования к includer" %}
+
+параметры между инклюдер объектами разные, но одним обязательным параметром будет имя `includer`а.
+
+`name` указывает имя инклюдера который запустится
+
+{% endnote %}
+
+#### Пример использования
+
+Абстрактный пример использования инклюдеров
+
+_смотри секцию соответствуещего инклюдера для конкретного примера использования_
+
+```
+# toc.yaml
+...
+items:
+  - name: <item-name>
+    include:
+      path: <path-where-to-include>
+      includers:
+        - name: <name-of-the-first-includer>
+          <includer-parameter>: <includer-parameter-value>
+        - name: <name-of-the-second-includer>
+        - name: <name-of-the-third-includer>
+      mode: link
+...
+```
+
+#### Список имплементированных инклюдеров
+
+- [Generic](#includers-generic)
+- [Open API](#includers-open-api)
+- [Unarchive](#includers-unarchive)
+- [Source Docs](#includers-source-docs) _в процессе деприкации в пользу generic инклюдера_
+
+#### Generic {#includers-generic}
+
+Вы можете сгенерировать документацию в markdown формате любой утилитой и включить её в основную документацию
+
+Инклюдер сгенерирует по ней оглавление и включит контент в документацию
+
+##### Пример использования
+
+У нас есть проект документации в `doc_root` папке.
+
+Положим сгенерированный контент в папку `doc_root/docs`.
+
+Включим этот контент с помощью инклюдера в `doc_root/toc.yaml`.
+
+Подключим разводящую в `doc_root/index.yaml`.
+
+```yaml
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: docs
+    include:
+      path: docs
+      includers:
+        - name: generic
+          input: docs
+      mode: link
+```
+
+```yaml
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: docs
+    href: docs/
+```
+
+#### Open API {#includers-open-api}
+
+Мы можем сгенерировать документацию из [Open API](https://www.openapis.org/) спецификации и включить её в основной документ
+
+{% note warning %}
+
+openapi инклюдер требует разрешение на использование HTML в документации
+
+выставите `allowHTML` на `true` внутри `.yfm` конфигурации
+
+```
+allowHTML: true
+```
+
+{% endnote %}
+
+##### Пример использования
+
+У нас есть проект документации в `doc_root` папке.
+
+Положим спецификацию open API по пути `doc_root/openapi.yaml`.
+
+Теперь нам нужно включить её в `doc_root/toc.yaml` с помощью openapi инклюдера.
+
+Подключим разводящую в `doc_root/index.yaml`.
+
+```yaml
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: openapi
+    include:
+      path: openapi
+      includers:
+        - name: openapi
+          input: openapi.yaml
+      mode: link
+```
+
+```yaml
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: openapi
+    href: openapi/
+```
+
+#### Unarchive {#includers-unarchive}
+
+Мы можем использовать `unarchive` инклюдер чтобы распаковать tarball перед тем как применять другие инклюдеры
+к контенту внутри него, например `generic` инклюдер
+
+##### Пример использования
+
+Скажем у нас есть `docs.tar` в корне проекта по пути `doc_root/docs.tar`.
+
+Внутри `docs.tar` находится контент который мы хотим включить используя `generic` инклюдер.
+
+Тогда нам нужно применить цепь инклюдеров(`unarchive` -> `generic`) для достижения нащих целей.
+
+```yaml
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+...
+   - name: multiple
+     include:
+       path: multiple
+       mode: link
+       includers:
+         # run unarchive includer
+         - name: unarchive
+           # specify tarball you want to unpack as input parameter
+           input: docs.tar
+           # specify output path where tarball content is going to be unpacked
+           output: unpacked
+         # run generic includer
+         - name: generic
+           # specify path from unarchive includers output field as input path
+           input: unpacked
+```
+
+```yaml
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: openapi
+    href: openapi/
+```
 
 #### Source Docs
 
 Мы можем включить документацию в формате [Source Docs](https://github.com/SourceDocs/SourceDocs) в основной документ.
 
+{% note warning %}
+
+Source Docs инклюдер находится в процессе деприкации в пользу [Generic Инклюдера](#includers-generic)
+
+{% endnote %}
+
 ##### Пример использования
 
 У нас есть проект документации в папке `doc_root`.
 
-Положим результат исполнения Source Docs в папку `doc_root/doc`.
+Положим результат исполнения Source Docs в папку `doc_root/docs`.
 
-Включим его в документацию внутри `doc_root/toc.yaml`, указав `includer` sourcedocs
+Включим его в документацию внутри `doc_root/toc.yaml`, указав `includer` sourcedocs.
 
 Поставим ссылку на сгенерированную разводящую в основной в `doc_root/index.yaml`.
 
@@ -177,40 +357,6 @@ title: documentation
 links:
   - title: docs
     href: docs/
-```
-
-#### Open API
-
-Мы можем сгенерировать документацию из [Open API](https://www.openapis.org/) спецификации и включить её в основную.
-
-##### Пример использования
-
-У нас есть проект документации в папке `doc_root`.
-
-Положим спецификацию в `doc_root/openapi.yaml`.
-
-Включим её внутри `doc_root/toc.yaml`, указав openapi `includer`.
-
-Поставим ссылку на сгенерированную разводящую в основной в `doc_root/index.yaml`.
-
-```yaml
-# doc_root/toc.yaml
-title: documentation
-href: index.yaml
-items:
-  - name: docs
-    include:
-      path: openapi.yaml
-      includer: openapi
-      mode: link
-```
-
-```yaml
-# doc_root/index.yaml
-title: documentation
-links:
-  - title: openapi
-    href: openapi/
 ```
 
 ## Настройка раскрытия разделов { #expanded }
