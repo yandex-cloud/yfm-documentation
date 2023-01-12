@@ -1,5 +1,17 @@
 # Revision history
 
+## December 2022
+
+### yfm-docs
+
+#### 2.0.0
+
+- [New Includers Interface](./project/toc.md#includers)
+- [Generic Includer](./project/toc.md#includers-generic)
+- [Open API Includer](./project/toc.md#includers-open-api)
+- [Unarchive Includer](./project/toc.md#includers-unarchive)
+- [Source Docs Includer](./project/toc.md#includers-source-docs)
+
 ## November 2022
 
 ### yfm-docs

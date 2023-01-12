@@ -128,34 +128,81 @@ items:
 
 ### Includers {#includers}
 
-You can include any content, as long as the includer for this type of content is implemented
+You can include any content using `includers`, as long as the includer for this type of content is implemented.
 
-{% note warning %}
+Includers are specified as:
 
-`includer` must be the name of the implemented includer.
+- an array of `includer` objects in the `includers` field
 
-`mode` must be **link or omitted**(link is the default).
+- `includer` object in the `includer` field. _in the process of deprecation in favor of the `includers` field_
 
-`path` must be the path to the included content.
+{% note warning "include requirements" %}
+
+`include` should provide `path` where content is gonna be included
+
+`path` field must be the **path to where content is gonna be included**.
+
+`mode` must be **link or omitted**
 
 {% endnote %}
 
+{% note warning "includers requirements" %}
+
+`includers` must be array of includer objects that are going to be executed
+in the order they were provided
+
+{% endnote %}
+
+{% note warning "includer requirements" %}
+
+parameters between includer objects differ but one common parameter is the **name of the includer to execute**
+
+`name` specify name of the includer to run
+
+{% endnote %}
+
+#### Usage example
+
+abstract example of the includers usage
+
+_refer to appropriate includer section for the concrete usage example_
+
+```
+# toc.yaml
+...
+items:
+  - name: <item-name>
+    include:
+      path: <path-where-to-include>
+      includers:
+        - name: <name-of-the-first-includer>
+          <includer-parameter>: <includer-parameter-value>
+        - name: <name-of-the-second-includer>
+        - name: <name-of-the-third-includer>
+      mode: link
+...
+```
+
 #### List of implemented includers
 
-- [Source Docs](https://github.com/SourceDocs/SourceDocs)
-- [Open API](https://www.openapis.org/)
+- [Generic](#includers-generic)
+- [Open API](#includers-open-api)
+- [Unarchive](#includers-unarchive)
+- [Source Docs](#includers-source-docs) _in the process of deprecation in favor of generic includer_
 
-#### Source Docs
+#### Generic {#includers-generic}
 
-You can generate documentation with [Source Docs](https://github.com/SourceDocs/SourceDocs) and include it into your main document.
+You can generate documentation in the **markdown format** with **the tool of your choice** and include it into your main documentation.
+
+Includer will generate table of content for the provided content and include it as it is.
 
 ##### Usage example
 
 Let's say we have a documentation project in the `doc_root` folder.
 
-Put the output of the Source Docs into the `doc_root/doc` folder.
+Put markdown content generated with the tool of your choice inside `doc_root/docs` folder.
 
-Then you need to include it inside `doc_root/toc.yaml` with sourcedocs `includer`.
+Then you need to include it inside `doc_root/toc.yaml` with generic `includer`.
 
 Link to the generated leading page inside main `doc_root/index.yaml`.
 
@@ -167,7 +214,9 @@ items:
   - name: docs
     include:
       path: docs
-      includer: sourcedocs
+      includers:
+        - name: generic
+          input: docs
       mode: link
 ```
 
@@ -179,9 +228,20 @@ links:
     href: docs/
 ```
 
-#### Open API
-
+#### Open API {#includers-open-api}
 You can generate documentation from the [Open API](https://www.openapis.org/) specification file and include it into your main document.
+
+{% note warning %}
+
+openapi includer requires you to enable usage of HTML inside documentation
+
+set `allowHTML` to `true` inside `.yfm` config
+
+```
+allowHTML: true
+```
+
+{% endnote %}
 
 ##### Usage example
 
@@ -198,10 +258,12 @@ Link to the generated leading page inside main `doc_root/index.yaml`
 title: documentation
 href: index.yaml
 items:
-  - name: docs
+  - name: openapi
     include:
-      path: openapi.yaml
-      includer: openapi
+      path: openapi
+      includers:
+        - name: openapi
+          input: openapi.yaml
       mode: link
 ```
 
@@ -211,6 +273,91 @@ title: documentation
 links:
   - title: openapi
     href: openapi/
+```
+
+#### Unarchive {#includers-unarchive}
+
+You can use `unarchive` includer to unpack your tarball before applying other includers e.g `generic` includer.
+
+##### Usage example
+
+As an example you might have `docs.tar` inside root of your documentation project `doc_root/docs.tar`.
+
+`docs.tar` has markdown content inside of it, that you would like to include with `generic` includer.
+
+Then you would apply chain of the includers(`unarchive` -> `generic`) to achive desired results.
+
+```yaml
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+...
+   - name: multiple
+     include:
+       path: multiple
+       mode: link
+       includers:
+         # run unarchive includer
+         - name: unarchive
+           # specify tarball you want to unpack as input parameter
+           input: docs.tar
+           # specify output path where tarball content is going to be unpacked
+           output: unpacked
+         # run generic includer
+         - name: generic
+           # specify path from unarchive includers output field as input path
+           input: unpacked
+```
+
+```yaml
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: openapi
+    href: openapi/
+```
+
+#### Source Docs {#includers-source-docs}
+
+You can generate documentation with [Source Docs](https://github.com/SourceDocs/SourceDocs) and include it into your main documentation.
+
+{% note warning %}
+
+Source Docs includer is getting depricated in the favor of [Generic Includer](#includers-generic)
+
+{% endnote %}
+
+##### Usage example
+
+Let's say we have a documentation project in the `doc_root` folder.
+
+Put the output of the Source Docs into the `doc_root/docs` folder.
+
+Then you need to include it inside `doc_root/toc.yaml` with sourcedocs `includer`.
+
+Link to the generated leading page inside main `doc_root/index.yaml`.
+
+```yaml
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: docs
+    include:
+      path: docs
+      includers:
+        - name: sourcedocs
+          input: docs
+      mode: link
+```
+
+```yaml
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: docs
+    href: docs/
 ```
 
 ## Section expansion { #expanded }
