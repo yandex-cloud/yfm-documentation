@@ -12,7 +12,7 @@
 * `--output, -o` — путь до директории, предназначенной для выходных данных (статических HTML).
 
 ```shell script
-yfm -i ./input-folder -o ./ouput-folder
+yfm -i ./input-folder -o ./output-folder
 ```
 
 ## YFM {#yfm}
