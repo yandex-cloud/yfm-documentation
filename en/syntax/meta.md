@@ -4,10 +4,10 @@ Comments and metadata are markup elements that are not displayed in the built fi
 
 ## Comments {#comments}
 
-To add a comment, use an empty [reference-style link](./links.md#reference-style).
+To add a comment, use the following markup. Make sure there is an empty line before the comment.
 
 ```markdown
-[//]: Comment
+[//]: # (Comment)
 ```
 
 ## Metadata {#meta}
