@@ -12,7 +12,7 @@ items:
         href: syntax/lists.md
       - name: Таблицы
         items:
-          - name: GFM Tables
+          - name: Простые таблицы
             href: syntax/tables/gfm.md
           - name: Многострочные таблицы
             href: syntax/tables/multiline.md
@@ -30,43 +30,13 @@ items:
         href: syntax/meta.md
       - name: Переменные
         href: syntax/vars.md
-      - name: Определения
+      - name: Всплывающие подсказки
         href: syntax/term.md
       - name: Дополнительные возможности
         href: syntax/additional.md
-  - name: Настройки
+  - name: Настройки YFM-проекта
     href: settings.md
-  - name: Инструменты
-    items:
-      - name: Transformer
-        items:
-          - name: Обзор
-            href: tools/transform/index.md
-          - name: Настройки
-            href: tools/transform/settings.md
-          - name: Подсветка кода
-            href: tools/transform/highlight.md
-      - name: Builder
-        items:
-          - name: Обзор
-            href: tools/docs/index.md
-          - name: Сборка
-            href: tools/docs/build.md
-          - name: Перевод
-            href: tools/docs/translate.md
-          - name: Настройки
-            href: tools/docs/settings.md
-          - name: Одностраничная сборка
-            href: tools/docs/singlepage.md
-          - name: Выкладка на S3
-            href: tools/docs/publish-s3.md
-  - name: Плагины
-    items:
-      - name: Обзор
-        href: plugins/index.md
-      - name: Подключить дополнительный плагин
-        href: plugins/import.md
-  - name: Организация YFM проекта
+  - name: Организация YFM-проекта
     items:
       - name: Обзор
         href: project/index.md
@@ -82,6 +52,38 @@ items:
         href: project/includes.md
       - name: Файл конфигурации линтера
         href: project/lint.md
+  - name: Инструменты и библиотеки
+    items:
+      - name: Transformer
+        items:
+          - name: Обзор
+            href: tools/transform/index.md
+          - name: Настройки
+            href: tools/transform/settings.md
+          - name: Подсветка кода
+            href: tools/transform/highlight.md
+      - name: Builder
+        items:
+          - name: Обзор
+            href: tools/docs/index.md
+          - name: Сборка
+            href: tools/docs/build.md
+          - name: Настройки сборки
+            href: tools/docs/settings.md
+          - name: Перевод
+            href: tools/docs/translate.md
+          - name: Одностраничная сборка
+            href: tools/docs/singlepage.md
+          - name: Выкладка на S3
+            href: tools/docs/publish-s3.md
+      - name: Библиотеа Mermaid
+        href: tools/mermaid.md
+  - name: Плагины
+    items:
+      - name: Обзор
+        href: plugins/index.md
+      - name: Дополнительные плагины
+        href: plugins/import.md
   - name: Внесение изменений
     href: contribution.md
   - name: Релизы YFM

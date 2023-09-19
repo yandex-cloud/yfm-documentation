@@ -9,42 +9,42 @@ npm i highlight.js
 
 ## Поддерживаемые языки
 
-Ключ который нужно использовать внутри код блока для включения подсветки.
+Ключ, который нужно использовать внутри код блока для включения подсветки:
 
-* apache
-* bash
-* coffeescript
-* cpp
-* cs
-* css
-* diff
-* go
-* http
-* ini
-* java
-* javascript
-* json
-* kotlin
-* less
-* lua
-* makefile
-* xml
-* markdown
-* nginx
-* objectivec
-* perl
-* php
-* plaintext
-* properties
-* python
-* ruby
-* rust
-* scss
-* shell
-* sql
-* swift
-* typescript
-* yaml
+* apache;
+* bash;
+* coffeescript;
+* cpp;
+* cs;
+* css;
+* diff;
+* go;
+* http;
+* ini;
+* java;
+* javascript;
+* json;
+* kotlin;
+* less;
+* lua;
+* makefile;
+* xml;
+* markdown;
+* nginx;
+* objectivec;
+* perl;
+* php;
+* plaintext;
+* properties;
+* python;
+* ruby;
+* rust;
+* scss;
+* shell;
+* sql;
+* swift;
+* typescript;
+* yaml.
 
 ## Подключить дополнительный язык {#add}
 
@@ -52,7 +52,7 @@ npm i highlight.js
 
 Набор языков передается в виде объекта, у которого:
 
-* ключ — имя языка.
+* ключ — имя языка;
 * значение — функция, определяющая язык.
 
 ```javascript

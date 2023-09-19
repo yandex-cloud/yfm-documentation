@@ -1,6 +1,6 @@
 # Файл конфигурации линтера
 
-Проект может содержать файл конфигурации линтера. Используется файл `.yfmlint` в корне проекта.
+Проект может содержать файл конфигурации линтера `.yfmlint` Он должен лежать в корне проекта.
 
 Конфиг по умолчанию выглядит так:
 
@@ -61,12 +61,12 @@ YFM001:
 ```
 
 Правила с префиксом `MD` предоставляются библиотекой [markdownlint](https://github.com/DavidAnson/markdownlint).
-Подробное описание всех правил с префиксом `MD` можно найти [здесь](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md).
-Подробное описание всех правил с префиксом `YFM` можно найти [здесь](https://github.com/yandex-cloud/yfm-transform/blob/master/lib/yfmlint/README.md).
+Подробное описание всех правил с префиксом `MD` можно найти [по ссылке](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md).
+Подробное описание всех правил с префиксом `YFM` можно найти [по ссылке](https://github.com/yandex-cloud/yfm-transform/blob/master/lib/yfmlint/README.md).
 
-В конфиге `.yfmlint` в секции `log-levels` вы можете переопределить уровень логгирования отдельно для каждого правила: `error`, `warn`, `disabled`.
+Вы можете переопределить уровень логирования в конфиге `.yfmlint` в секции `log-levels` отдельно для каждого правила: `error`, `warn`, `disabled`.
 
-В корневой секции конфига можно настроить значения передаваемые правилам. Например:
+В корневой секции конфига можно настроить значения, передаваемые правилам. Например:
 
 ```yaml
 # Inline code length
@@ -89,8 +89,8 @@ MD033:
 log-levels:
 ```
 
-Дефолтные значения для правил с префиксом `MD` указаны [здесь.](https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml)
-Дефолтные значения для правил с префиксом `YFM` указаны [здесь.](https://github.com/yandex-cloud/yfm-transform/blob/master/lib/yfmlint/yfmlint.js)
+Дефолтные значения для правил с префиксом `MD` указаны [по ссылке](https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml).
+Дефолтные значения для правил с префиксом `YFM` указаны [по ссылке](https://github.com/yandex-cloud/yfm-transform/blob/master/lib/yfmlint/yfmlint.js).
 
 Правила можно включить, выключить, настроить для всего файла или абзаца в файле.
-Посмотрите на примеры [здесь.](https://github.com/DavidAnson/markdownlint/blob/a852407c887ec60949aa5365ed964bab833f962f/README.md#configuration) 
+Примеры можно посмотреть [по ссылке](https://github.com/DavidAnson/markdownlint/blob/a852407c887ec60949aa5365ed964bab833f962f/README.md#configuration).

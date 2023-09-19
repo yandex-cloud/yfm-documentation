@@ -16,5 +16,5 @@
 parameter: value
 parameter: value
 ```
-* `parameter` — имя задаваемой настройки.
+* `parameter` — имя задаваемой настройки;
 * `value` — значение настройки.
