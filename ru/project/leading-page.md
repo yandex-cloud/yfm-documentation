@@ -6,7 +6,7 @@
 
 **Пример**: оформление разводящей страницы [документации сервиса Yandex Compute Cloud](https://cloud.yandex.ru/docs/compute/).
 
-![Пример разводящей страницы](../_images/leading.jpg)
+![Пример разводящей страницы](../_images/leading.png)
 
 ## Структура {#structure}
 
