@@ -89,8 +89,8 @@ MD033:
 log-levels:
 ```
 
-Дефолтные значения для правил с префиксом `MD` указаны [здесь.](https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml)
-Дефолтные значения для правил с префиксом `YFM` указаны [здесь.](https://github.com/yandex-cloud/yfm-transform/blob/master/lib/yfmlint/yfmlint.js)
+Дефолтные значения для правил с префиксом `MD` указаны [здесь](https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml).
+Описания правил с префиксом `YFM` указаны [здесь](https://github.com/yandex-cloud/yfm-transform/tree/master/src/transform/yfmlint).
 
 Правила можно включить, выключить, настроить для всего файла или абзаца в файле.
 Посмотрите на примеры [здесь.](https://github.com/DavidAnson/markdownlint/blob/a852407c887ec60949aa5365ed964bab833f962f/README.md#configuration) 
