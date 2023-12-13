@@ -13,7 +13,7 @@
 ![alt-текст](_images/image.png "текст_подсказки" =100x100)
 ```
 
-  * `alt-текст` —  альтернативный текст изображения.
+  * `alt-текст` —  название изображения, задается автором. В сборке не отображается.
   * `_images/image.png` — URL или путь до файла изображения.
   * `"текст_подсказки"` — подсказка, которая будет отображаться при наведении на изображение. Необязательный параметр.
   * `=100x100` — размер изображения. Необязательный параметр.
@@ -32,7 +32,7 @@
 [![An old rock in the desert](../../_images/mountain.jpg "Mountain" =100x200)](https://yandex.com/images/search?text=mountain)
 ```
 
-**Результат**
+**Результат:**
 
 [![An old rock in the desert](../../_images/mountain.jpg "Mountain" =100x200)](https://yandex.com/images/search?text=mountain)
 
@@ -46,7 +46,7 @@
 [image1]: ../../_images/mountain.jpg "Mountain"
 ```
 
-**Результат**
+**Результат:**
 
 ![An old rock in the desert][image1]
 

@@ -1,4 +1,4 @@
-# Подключить дополнительный плагин
+# Дополнительные плагины
 
 YFM использует [markdown-it](https://www.npmjs.com/package/markdown-it) в качестве парсера, поэтому вы можете подключить любой плагин из [списка плагинов для markdown-it](https://www.npmjs.com/search?q=keywords:markdown-it-plugin).
 
@@ -13,6 +13,12 @@ npm i markdown-it-emoji
 {% list tabs %}
 
 - Transformer
+
+   {% note warning %}
+
+   При переопределении параметра `plugins` необходимо заново подключать [плагины YFM](index.md). Для этого импортируйте их из пакета `@doc-tools/transform` и передайте в массиве плагинов. 
+
+   {% endnote %}  
 
    1. Подключите плагин в своем коде, используя функцию `require()` или `import()`:  
       ```javascript
@@ -34,12 +40,7 @@ npm i markdown-it-emoji
    const content = fs.readFileSync(filePath, 'utf');
    const {result: {html, meta}, logs} = transform(content, {plugins: [cut, sup, emoji]});
    ```
-
-   {% note warning %}
-
-   При переопределении параметра `plugins` необходимо заново подключать [плагины YFM](index.md). Для этого импортируйте их из пакета `@doc-tools/transform` и передайте в массиве плагинов. 
-
-   {% endnote %}   
+ 
 
 - Builder
 
